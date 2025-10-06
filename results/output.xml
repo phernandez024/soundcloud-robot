@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.0 on win32)" generated="2025-10-07T00:47:37.683332" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\USER\PycharmProjects\PythonProject\test.robot">
+<kw name="Open Edge With My Profile" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-10-07T00:47:38.108612" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\PycharmProjects\PythonProject\results\downloads"&gt;C:\Users\USER\PycharmProjects\PythonProject\results\downloads&lt;/a&gt;' already exists.</msg>
+<arg>${DOWNLOAD_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.108612" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-07T00:47:38.109666" level="INFO">${opt} = &lt;selenium.webdriver.edge.options.Options object at 0x0000022DE3E1EB70&gt;</msg>
+<var>${opt}</var>
+<arg>__import__('selenium.webdriver.edge.options', fromlist=['Options']).Options()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.108612" elapsed="0.001054"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-07T00:47:38.109666" level="INFO">${arg_user} = --user-data-dir=C:/Users/USER/AppData/Local/Microsoft/Edge/User Data</msg>
+<var>${arg_user}</var>
+<arg>--user-data-dir=${EDGE_USER_DATA_DIR}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.109666" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-07T00:47:38.109666" level="INFO">${arg_prof} = --profile-directory=Default</msg>
+<var>${arg_prof}</var>
+<arg>--profile-directory=${EDGE_PROFILE_DIR}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.109666" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-07T00:47:38.110827" level="INFO">${arg_max} = --start-maximized</msg>
+<var>${arg_max}</var>
+<arg>--start-maximized</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.110827" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-07T00:47:38.110827" level="INFO">${arg_devshm} = --disable-dev-shm-usage</msg>
+<var>${arg_devshm}</var>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.110827" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-07T00:47:38.110827" level="INFO">${arg_no_first} = --no-first-run</msg>
+<var>${arg_no_first}</var>
+<arg>--no-first-run</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.110827" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-07T00:47:38.110827" level="INFO">${arg_no_default} = --no-default-browser-check</msg>
+<var>${arg_no_default}</var>
+<arg>--no-default-browser-check</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.110827" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-07T00:47:38.111873" level="INFO">${arg_allow} = --remote-allow-origins=*</msg>
+<var>${arg_allow}</var>
+<arg>--remote-allow-origins=*</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.110827" elapsed="0.001046"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_user}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.111873" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_prof}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.111873" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_max}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.111873" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_devshm}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.111873" elapsed="0.000994"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_no_first}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.112867" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_no_default}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.112867" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_allow}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.112867" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-07T00:47:38.112867" level="INFO">${prefs} = {'download.default_directory': 'C:\\Users\\USER\\PycharmProjects\\PythonProject\\results\\downloads', 'download.prompt_for_download': False, 'download.directory_upgrade': True, 'safebrowsing.enabled':...</msg>
+<var>${prefs}</var>
+<arg>{"download.default_directory": r"""${DOWNLOAD_DIR}""", "download.prompt_for_download": False, "download.directory_upgrade": True, "safebrowsing.enabled": True}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.112867" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.113867" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-10-07T00:47:38.113867" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<arg>Edge</arg>
+<arg>options=${opt}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.113867" elapsed="2.351605"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${BASE_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-07T00:47:40.465472" elapsed="0.001999"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Edge abierto con perfil: ${EDGE_PROFILE_DIR} — Descargas en: ${DOWNLOAD_DIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-07T00:47:40.467471" elapsed="0.000999"/>
+</kw>
+<doc>Abre Edge con tu perfil y fija la carpeta de descargas sin diálogos.</doc>
+<status status="PASS" start="2025-10-07T00:47:38.107613" elapsed="2.360857"/>
+</kw>
+<test id="s1-t1" name="Opcion B - Hover en playlist y descargar si hay" line="187">
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-10-07T00:47:40.498476" level="INFO">${OPEN_METHOD} = hover</msg>
+<arg>${OPEN_METHOD}</arg>
+<arg>hover</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-10-07T00:47:40.498476" elapsed="0.000000"/>
+</kw>
+<kw name="Open Playlist">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-07T00:47:40.500472" level="INFO">Opening url 'https://soundcloud.com/doncucho/sets/schranz-3'</msg>
+<arg>${PLAYLIST_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-07T00:47:40.499473" elapsed="5.762408"/>
+</kw>
+<status status="PASS" start="2025-10-07T00:47:40.499473" elapsed="5.762408"/>
+</kw>
+<kw name="Download If Available">
+<kw name="Get File Count In Dir">
+<kw name="List Files In Directory" owner="OperatingSystem">
+<msg time="2025-10-07T00:47:46.264885" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\USER\PycharmProjects\PythonProject\results\downloads"&gt;C:\Users\USER\PycharmProjects\PythonProject\results\downloads&lt;/a&gt;'.</msg>
+<msg time="2025-10-07T00:47:46.264885" level="INFO">0 files:
+</msg>
+<msg time="2025-10-07T00:47:46.264885" level="INFO">${files} = []</msg>
+<var>${files}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<arg>absolute=True</arg>
+<doc>Wrapper for `List Directory` that returns only files.</doc>
+<status status="PASS" start="2025-10-07T00:47:46.263886" elapsed="0.000999"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-10-07T00:47:46.264885" level="INFO">Length is 0.</msg>
+<msg time="2025-10-07T00:47:46.265883" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>${files}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-10-07T00:47:46.264885" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-07T00:47:46.265883" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-07T00:47:46.265883" level="INFO">${before} = 0</msg>
+<var>${before}</var>
+<status status="PASS" start="2025-10-07T00:47:46.263886" elapsed="0.001997"/>
+</kw>
+<kw name="Open More Menu (Any)">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open More Menu From Playlist By Hover">
+<kw name="Ensure Track Item Is Rendered">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-07T00:47:46.268882" level="INFO">${li} = (//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[5]</msg>
+<var>${li}</var>
+<arg>(//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[${n}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-07T00:47:46.268882" elapsed="0.000000"/>
+</kw>
+<kw name=":FOR">
+<msg time="2025-10-07T00:47:46.268882" level="FAIL">Support for the old FOR loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</msg>
+<arg>${i}</arg>
+<arg>IN RANGE</arg>
+<arg>0</arg>
+<arg>40</arg>
+<status status="FAIL" start="2025-10-07T00:47:46.268882" elapsed="0.000000">Support for the old FOR loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</status>
+</kw>
+<kw name="\">
+<arg>${ok}=</arg>
+<arg>Run Keyword And Return Status</arg>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=${li}</arg>
+<status status="NOT RUN" start="2025-10-07T00:47:46.269880" elapsed="0.000000"/>
+</kw>
+<kw name="\">
+<arg>Exit For Loop If</arg>
+<arg>${ok}</arg>
+<status status="NOT RUN" start="2025-10-07T00:47:46.269880" elapsed="0.000000"/>
+</kw>
+<kw name="\">
+<arg>Execute JavaScript</arg>
+<arg>window.scrollBy(0, 800)</arg>
+<status status="NOT RUN" start="2025-10-07T00:47:46.269880" elapsed="0.000000"/>
+</kw>
+<kw name="\">
+<arg>Sleep</arg>
+<arg>0.2 s</arg>
+<status status="NOT RUN" start="2025-10-07T00:47:46.269880" elapsed="0.001002"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=${li}</arg>
+<arg>${BASE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.270882" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=${li}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.270882" elapsed="0.000000"/>
+</kw>
+<arg>${n}</arg>
+<doc>Hace scroll hasta que el &lt;li&gt; de la pista n esté en el DOM/viewport.</doc>
+<status status="FAIL" start="2025-10-07T00:47:46.267881" elapsed="0.003001">Support for the old FOR loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</status>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${li}</var>
+<arg>(//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[${n}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.271885" elapsed="0.000000"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<arg>xpath=${li}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.271885" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${more_in_li}</var>
+<arg>${li}//button[contains(@class,'more') or contains(@class,'sc-button-more') or @aria-label='More' or @aria-label='Más']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.271885" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${more_in_li}</arg>
+<arg>${BASE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.272881" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=${more_in_li}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.272881" elapsed="0.000000"/>
+</kw>
+<arg>${n}</arg>
+<doc>Opción B: hace hover sobre el &lt;li&gt; de la pista en la playlist y abre el menú contextual.</doc>
+<status status="FAIL" start="2025-10-07T00:47:46.266881" elapsed="0.006000">Support for the old FOR loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</status>
+</kw>
+<arg>'${OPEN_METHOD}'=='hover'</arg>
+<arg>Open More Menu From Playlist By Hover</arg>
+<arg>${n}</arg>
+<arg>ELSE</arg>
+<arg>Open Track Page By Index</arg>
+<arg>${n}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2025-10-07T00:47:46.266881" elapsed="0.006000">Support for the old FOR loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</status>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${OPEN_METHOD}'!='hover'</arg>
+<arg>Open More Menu On Track Page</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.273881" elapsed="0.000000"/>
+</kw>
+<arg>${TRACK_NUM}</arg>
+<doc>Decide si abre por hover (playlist) o abriendo la página de pista y allí el menú.</doc>
+<status status="FAIL" start="2025-10-07T00:47:46.265883" elapsed="0.007998">Support for the old FOR loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<arg>5x</arg>
+<arg>1 s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>//button[contains(@class,'sc-button-download')]</arg>
+<arg>| //button[.//span[normalize-space(.)='Download']]</arg>
+<arg>| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(.,'Download') or contains(@href,'/download'))]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.273881" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${has_btn}</var>
+<arg>Page Should Contain Element</arg>
+<arg>//button[contains(@class,'sc-button-download')] | //button[.//span[normalize-space(.)='Download']]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.274881" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${has_btn}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//button[contains(@class,'sc-button-download')] | //button[.//span[normalize-space(.)='Download']]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.274881" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-10-07T00:47:46.274881" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${has_link}</var>
+<arg>Page Should Contain Element</arg>
+<arg>//a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(.,'Download') or contains(@href,'/download'))]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.274881" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${has_link}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(.,'Download') or contains(@href,'/download'))]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.275881" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-10-07T00:47:46.275881" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>❌ NO HAY DESCARGA</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.275881" elapsed="0.000000"/>
+</kw>
+<kw name="[Return]">
+<arg>None</arg>
+<status status="NOT RUN" start="2025-10-07T00:47:46.275881" elapsed="0.001041"/>
+</kw>
+<status status="NOT RUN" start="2025-10-07T00:47:46.275881" elapsed="0.001041"/>
+</branch>
+<status status="NOT RUN" start="2025-10-07T00:47:46.275881" elapsed="0.001041"/>
+</if>
+<status status="NOT RUN" start="2025-10-07T00:47:46.274881" elapsed="0.002041"/>
+</branch>
+<status status="NOT RUN" start="2025-10-07T00:47:46.274881" elapsed="0.002041"/>
+</if>
+<kw name="Wait For New Download">
+<arg>${before}</arg>
+<doc>Espera a que aparezca un nuevo archivo y a que termine (desaparece .crdownload).</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.276922" elapsed="0.000000"/>
+</kw>
+<doc>Abre el menú (según OPEN_METHOD), clica Download (si existe) y espera el archivo.</doc>
+<status status="FAIL" start="2025-10-07T00:47:46.262889" elapsed="0.014033">Support for the old FOR loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-07T00:47:46.277925" elapsed="0.000000"/>
+</kw>
+<doc>Usa OPEN_METHOD=hover (menú en la lista). El botón puede no ofrecer Download.</doc>
+<status status="FAIL" start="2025-10-07T00:47:40.468470" elapsed="5.810410">Support for the old FOR loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-10-07T00:47:46.279579" elapsed="2.429968"/>
+</kw>
+<doc>SoundCloud downloader – dos modos de abrir el menú (click en pista vs hover en playlist) y descargar si está disponible.</doc>
+<status status="FAIL" start="2025-10-07T00:47:37.685332" elapsed="11.024215"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="0" fail="1" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-07T00:47:37.677372" level="WARN">Error in file 'C:\Users\USER\PycharmProjects\PythonProject\test.robot' on line 107: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-10-07T00:47:37.677372" level="WARN">Error in file 'C:\Users\USER\PycharmProjects\PythonProject\test.robot' on line 127: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

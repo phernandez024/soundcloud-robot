@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.0 on win32)" generated="2025-10-06T20:47:31.248016" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\USER\PycharmProjects\PythonProject\test.robot">
+<kw name="Open Browser With Profile" type="SETUP">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${BASE_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-06T20:47:31.629980" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>0 s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-10-06T20:47:31.630980" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-06T20:47:31.630980" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000227D68AAB40&gt;</msg>
+<var>${options}</var>
+<arg>__import__('selenium.webdriver.chrome.options', fromlist=['Options']).Options()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-06T20:47:31.630980" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-06T20:47:31.631979" level="INFO">${arg_user_dir} = --user-data-dir=C:/Users/USER/AppData/Local/Google/Chrome/User Data</msg>
+<var>${arg_user_dir}</var>
+<arg>--user-data-dir=${CHROME_USER_DATA_DIR}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-06T20:47:31.630980" elapsed="0.000999"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-06T20:47:31.631979" level="INFO">${arg_profile_dir} = --profile-directory=Default</msg>
+<var>${arg_profile_dir}</var>
+<arg>--profile-directory=${CHROME_PROFILE_DIR}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-06T20:47:31.631979" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg_user_dir}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-06T20:47:31.631979" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg_profile_dir}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-06T20:47:31.631979" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-10-06T20:47:31.633022" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-10-06T20:47:34.516673" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-10-06T20:47:34.516673" level="FAIL">SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fd921eb5+80197]
+	GetHandleVerifier [0x0x7ff7fd921f10+80288]
+	(No symbol) [0x0x7ff7fd6a02fa]
+	(No symbol) [0x0x7ff7fd6dfd24]
+	(No symbol) [0x0x7ff7fd6d9bd0]
+	(No symbol) [0x0x7ff7fd72e0ef]
+	(No symbol) [0x0x7ff7fd72d870]
+	(No symbol) [0x0x7ff7fd720153]
+	(No symbol) [0x0x7ff7fd6e8b02]
+	(No symbol) [0x0x7ff7fd6e98d3]
+	GetHandleVerifier [0x0x7ff7fdbde83d+2949837]
+	GetHandleVerifier [0x0x7ff7fdbd8c6a+2926330]
+	GetHandleVerifier [0x0x7ff7fdbf86c7+3055959]
+	GetHandleVerifier [0x0x7ff7fd93cfee+191102]
+	GetHandleVerifier [0x0x7ff7fd9450af+224063]
+	GetHandleVerifier [0x0x7ff7fd92af64+117236]
+	GetHandleVerifier [0x0x7ff7fd92b119+117673]
+	GetHandleVerifier [0x0x7ff7fd9110a8+11064]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</msg>
+<arg>${BROWSER}</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-10-06T20:47:31.631979" elapsed="2.888637">SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fd921eb5+80197]
+	GetHandleVerifier [0x0x7ff7fd921f10+80288]
+	(No symbol) [0x0x7ff7fd6a02fa]
+	(No symbol) [0x0x7ff7fd6dfd24]
+	(No symbol) [0x0x7ff7fd6d9bd0]
+	(No symbol) [0x0x7ff7fd72e0ef]
+	(No symbol) [0x0x7ff7fd72d870]
+	(No symbol) [0x0x7ff7fd720153]
+	(No symbol) [0x0x7ff7fd6e8b02]
+	(No symbol) [0x0x7ff7fd6e98d3]
+	GetHandleVerifier [0x0x7ff7fdbde83d+2949837]
+	GetHandleVerifier [0x0x7ff7fdbd8c6a+2926330]
+	GetHandleVerifier [0x0x7ff7fdbf86c7+3055959]
+	GetHandleVerifier [0x0x7ff7fd93cfee+191102]
+	GetHandleVerifier [0x0x7ff7fd9450af+224063]
+	GetHandleVerifier [0x0x7ff7fd92af64+117236]
+	GetHandleVerifier [0x0x7ff7fd92b119+117673]
+	GetHandleVerifier [0x0x7ff7fd9110a8+11064]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-10-06T20:47:34.520616" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-10-06T20:47:31.628978" elapsed="2.892660">SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fd921eb5+80197]
+	GetHandleVerifier [0x0x7ff7fd921f10+80288]
+	(No symbol) [0x0x7ff7fd6a02fa]
+	(No symbol) [0x0x7ff7fd6dfd24]
+	(No symbol) [0x0x7ff7fd6d9bd0]
+	(No symbol) [0x0x7ff7fd72e0ef]
+	(No symbol) [0x0x7ff7fd72d870]
+	(No symbol) [0x0x7ff7fd720153]
+	(No symbol) [0x0x7ff7fd6e8b02]
+	(No symbol) [0x0x7ff7fd6e98d3]
+	GetHandleVerifier [0x0x7ff7fdbde83d+2949837]
+	GetHandleVerifier [0x0x7ff7fdbd8c6a+2926330]
+	GetHandleVerifier [0x0x7ff7fdbf86c7+3055959]
+	GetHandleVerifier [0x0x7ff7fd93cfee+191102]
+	GetHandleVerifier [0x0x7ff7fd9450af+224063]
+	GetHandleVerifier [0x0x7ff7fd92af64+117236]
+	GetHandleVerifier [0x0x7ff7fd92b119+117673]
+	GetHandleVerifier [0x0x7ff7fd9110a8+11064]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</status>
+</kw>
+<test id="s1-t1" name="Comprobar descarga en canción N de playlist (sesión ya iniciada)" line="65">
+<doc>Cierra Chrome antes de ejecutar. Usa el perfil con la sesión iniciada.</doc>
+<status status="FAIL" start="2025-10-06T20:47:34.521638" elapsed="0.000000">Parent suite setup failed:
+SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fd921eb5+80197]
+	GetHandleVerifier [0x0x7ff7fd921f10+80288]
+	(No symbol) [0x0x7ff7fd6a02fa]
+	(No symbol) [0x0x7ff7fd6dfd24]
+	(No symbol) [0x0x7ff7fd6d9bd0]
+	(No symbol) [0x0x7ff7fd72e0ef]
+	(No symbol) [0x0x7ff7fd72d870]
+	(No symbol) [0x0x7ff7fd720153]
+	(No symbol) [0x0x7ff7fd6e8b02]
+	(No symbol) [0x0x7ff7fd6e98d3]
+	GetHandleVerifier [0x0x7ff7fdbde83d+2949837]
+	GetHandleVerifier [0x0x7ff7fdbd8c6a+2926330]
+	GetHandleVerifier [0x0x7ff7fdbf86c7+3055959]
+	GetHandleVerifier [0x0x7ff7fd93cfee+191102]
+	GetHandleVerifier [0x0x7ff7fd9450af+224063]
+	GetHandleVerifier [0x0x7ff7fd92af64+117236]
+	GetHandleVerifier [0x0x7ff7fd92b119+117673]
+	GetHandleVerifier [0x0x7ff7fd9110a8+11064]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-10-06T20:47:34.523651" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-10-06T20:47:31.250016" elapsed="3.273635">Suite setup failed:
+SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7fd921eb5+80197]
+	GetHandleVerifier [0x0x7ff7fd921f10+80288]
+	(No symbol) [0x0x7ff7fd6a02fa]
+	(No symbol) [0x0x7ff7fd6dfd24]
+	(No symbol) [0x0x7ff7fd6d9bd0]
+	(No symbol) [0x0x7ff7fd72e0ef]
+	(No symbol) [0x0x7ff7fd72d870]
+	(No symbol) [0x0x7ff7fd720153]
+	(No symbol) [0x0x7ff7fd6e8b02]
+	(No symbol) [0x0x7ff7fd6e98d3]
+	GetHandleVerifier [0x0x7ff7fdbde83d+2949837]
+	GetHandleVerifier [0x0x7ff7fdbd8c6a+2926330]
+	GetHandleVerifier [0x0x7ff7fdbf86c7+3055959]
+	GetHandleVerifier [0x0x7ff7fd93cfee+191102]
+	GetHandleVerifier [0x0x7ff7fd9450af+224063]
+	GetHandleVerifier [0x0x7ff7fd92af64+117236]
+	GetHandleVerifier [0x0x7ff7fd92b119+117673]
+	GetHandleVerifier [0x0x7ff7fd9110a8+11064]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="0" fail="1" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.0 on win32)" generated="2025-10-06T20:55:37.881288" rpa="false" schemaversion="5">
+<suite id="s1" name="Setup Login" source="C:\Users\USER\PycharmProjects\PythonProject\setup_login.robot">
+<test id="s1-t1" name="Login manual y guardar sesión" line="8">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-06T20:55:38.174332" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\USER\\PycharmProjects\\PythonProject\\browser\\traces\\temp\\4278f2f1-5eec-4c6e-a679-73b7a1889e48"}</msg>
+<msg time="2025-10-06T20:55:38.211332" level="INFO">Starting Browser process C:\Users\USER\PycharmProjects\PythonProject\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:61642</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2025-10-06T20:55:38.173334" elapsed="216.320564">Execution terminated by signal</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2025-10-06T20:59:14.493898" elapsed="0.000921"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>https://soundcloud.com/signin</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2025-10-06T20:59:14.494819" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-06T20:59:14.494819" elapsed="0.001050"/>
+</kw>
+<kw name="Save Storage State" owner="Browser">
+<arg>${STATE_FILE}</arg>
+<tag>BrowserControl</tag>
+<tag>Getter</tag>
+<doc>Saves the current active context storage state to a file.</doc>
+<status status="NOT RUN" start="2025-10-06T20:59:14.495869" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-10-06T20:59:14.495869" elapsed="0.000950"/>
+</kw>
+<errors>
+<msg time="2025-10-06T20:59:14.802518" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>
