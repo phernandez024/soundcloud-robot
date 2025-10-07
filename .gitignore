@@ -1,0 +1,21 @@
+@"
+# Python / venv
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+
+# Robot Framework outputs
+results/
+output.xml
+log.html
+report.html
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+"@ | Out-File -Encoding UTF8 .gitignore
