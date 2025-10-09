@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.11.9 on win32)" generated="2025-10-08T11:11:10.315043" rpa="false" schemaversion="5">
-<suite id="s1" name="Prueba2" source="C:\Users\phmartin\soundcloud-robot\prueba2.robot">
+<robot generator="Robot 7.3.2 (Python 3.12.0 on win32)" generated="2025-10-09T23:12:15.504342" rpa="false" schemaversion="5">
+<suite id="s1" name="Prueba2" source="C:\Users\USER\PycharmProjects\soundcloud-robot\prueba2.robot">
 <kw name="Open Edge With Default Windows Profile" type="SETUP">
 <kw name="Create Directory" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:10.878901" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\phmartin\soundcloud-robot\results\downloads"&gt;C:\Users\phmartin\soundcloud-robot\results\downloads&lt;/a&gt;' already exists.</msg>
+<msg time="2025-10-09T23:12:16.072530" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\results\downloads"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\results\downloads&lt;/a&gt;' already exists.</msg>
 <arg>${DOWNLOAD_DIR}</arg>
 <doc>Creates the specified directory.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.071528" elapsed="0.001002"/>
 </kw>
 <kw name="Create Directory" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:10.878901" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\phmartin\soundcloud-robot\results\meta"&gt;C:\Users\phmartin\soundcloud-robot\results\meta&lt;/a&gt;' already exists.</msg>
+<msg time="2025-10-09T23:12:16.072530" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta&lt;/a&gt;' already exists.</msg>
 <arg>${META_DIR}</arg>
 <doc>Creates the specified directory.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.072530" elapsed="0.000000"/>
 </kw>
 <kw name="Create Directory" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:10.878901" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\phmartin\soundcloud-robot\results\portadas"&gt;C:\Users\phmartin\soundcloud-robot\results\portadas&lt;/a&gt;' already exists.</msg>
+<msg time="2025-10-09T23:12:16.073533" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\results\portadas"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\results\portadas&lt;/a&gt;' already exists.</msg>
 <arg>${COVERS_DIR}</arg>
 <doc>Creates the specified directory.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.072530" elapsed="0.001003"/>
 </kw>
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:10.878901" level="INFO">${LOCALAPPDATA} = C:\Users\phmartin\AppData\Local</msg>
+<msg time="2025-10-09T23:12:16.073533" level="INFO">${LOCALAPPDATA} = C:\Users\USER\AppData\Local</msg>
 <var>${LOCALAPPDATA}</var>
 <arg>LOCALAPPDATA</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.073533" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:10.878901" level="INFO">${USER_DATA} = C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data</msg>
+<msg time="2025-10-09T23:12:16.073533" level="INFO">${USER_DATA} = C:\Users\USER\AppData\Local\Microsoft\Edge\User Data</msg>
 <var>${USER_DATA}</var>
 <arg>${LOCALAPPDATA}${/}Microsoft${/}Edge${/}User Data</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.073533" elapsed="0.000000"/>
 </kw>
 <kw name="Directory Should Exist" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:10.878901" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data"&gt;C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data&lt;/a&gt;' exists.</msg>
+<msg time="2025-10-09T23:12:16.074530" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\AppData\Local\Microsoft\Edge\User Data"&gt;C:\Users\USER\AppData\Local\Microsoft\Edge\User Data&lt;/a&gt;' exists.</msg>
 <arg>${USER_DATA}</arg>
 <arg>No se encuentra User Data de Edge: ${USER_DATA}</arg>
 <doc>Fails unless the given path points to an existing directory.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.073533" elapsed="0.000997"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:10.878901" level="INFO">${LOCAL_STATE} = C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data\Local State</msg>
+<msg time="2025-10-09T23:12:16.074530" level="INFO">${LOCAL_STATE} = C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Local State</msg>
 <var>${LOCAL_STATE}</var>
 <arg>${USER_DATA}${/}Local State</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.074530" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-08T11:11:10.878901" level="INFO">${exists} = True</msg>
+<msg time="2025-10-09T23:12:16.075530" level="INFO">${exists} = True</msg>
 <var>${exists}</var>
 <arg>__import__('os').path.exists(r"""${LOCAL_STATE}""")</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.074530" elapsed="0.001000"/>
 </kw>
 <if>
 <branch type="IF" condition="${exists}">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-08T11:11:10.901523" level="INFO">${LAST_USED} = Default</msg>
+<msg time="2025-10-09T23:12:16.089521" level="INFO">${LAST_USED} = Default</msg>
 <var>${LAST_USED}</var>
 <arg>__import__('json').load(open(r"""${LOCAL_STATE}""","r",encoding="utf-8")).get("profile",{}).get("last_used","Default")</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.894747" elapsed="0.006776"/>
+<status status="PASS" start="2025-10-09T23:12:16.075530" elapsed="0.013991"/>
 </kw>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.022622"/>
+<status status="PASS" start="2025-10-09T23:12:16.075530" elapsed="0.013991"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Variable" owner="BuiltIn">
 <var>${LAST_USED}</var>
 <arg>Default</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:10.901523" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:16.089521" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-10-08T11:11:10.901523" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:16.089521" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="0.022622"/>
+<status status="PASS" start="2025-10-09T23:12:16.075530" elapsed="0.013991"/>
 </if>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:10.901523" level="INFO">${PROFILE_PATH} = C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data\Default</msg>
+<msg time="2025-10-09T23:12:16.090521" level="INFO">${PROFILE_PATH} = C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default</msg>
 <var>${PROFILE_PATH}</var>
 <arg>${USER_DATA}${/}${LAST_USED}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.901523" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.089521" elapsed="0.001000"/>
 </kw>
 <kw name="Directory Should Exist" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:10.901523" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data\Default"&gt;C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data\Default&lt;/a&gt;' exists.</msg>
+<msg time="2025-10-09T23:12:16.090521" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default"&gt;C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default&lt;/a&gt;' exists.</msg>
 <arg>${PROFILE_PATH}</arg>
 <arg>El perfil detectado no existe: ${PROFILE_PATH}</arg>
 <doc>Fails unless the given path points to an existing directory.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.901523" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.090521" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>🔎 Perfil Edge detectado: ${LAST_USED} → ${PROFILE_PATH}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.901523" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.090521" elapsed="0.001000"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Run Process" owner="Process">
-<msg time="2025-10-08T11:11:10.901523" level="INFO">Starting process:
+<msg time="2025-10-09T23:12:16.091521" level="INFO">Starting process:
 taskkill /F /IM msedge.exe</msg>
-<msg time="2025-10-08T11:11:10.994544" level="INFO">Waiting for process to complete.</msg>
-<msg time="2025-10-08T11:11:11.477788" level="INFO">Process completed.</msg>
+<msg time="2025-10-09T23:12:16.100488" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-10-09T23:12:16.252524" level="INFO">Process completed.</msg>
 <arg>taskkill</arg>
 <arg>/F</arg>
 <arg>/IM</arg>
 <arg>msedge.exe</arg>
 <arg>shell=True</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.901523" elapsed="0.576265"/>
+<status status="PASS" start="2025-10-09T23:12:16.091521" elapsed="0.161003"/>
 </kw>
 <arg>Run Process</arg>
 <arg>taskkill</arg>
@@ -117,24 +117,24 @@ taskkill /F /IM msedge.exe</msg>
 <arg>msedge.exe</arg>
 <arg>shell=True</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.901523" elapsed="0.576265"/>
+<status status="PASS" start="2025-10-09T23:12:16.091521" elapsed="0.161003"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-08T11:11:11.978432" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2025-10-09T23:12:16.753344" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5 s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.477788" elapsed="0.500644"/>
+<status status="PASS" start="2025-10-09T23:12:16.252524" elapsed="0.500820"/>
 </kw>
 <kw name="List Files In Directory" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:11.978432" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data\Default"&gt;C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data\Default&lt;/a&gt;'.</msg>
-<msg time="2025-10-08T11:11:11.980211" level="INFO">0 files:
+<msg time="2025-10-09T23:12:16.753344" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default"&gt;C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default&lt;/a&gt;'.</msg>
+<msg time="2025-10-09T23:12:16.754284" level="INFO">0 files:
 </msg>
-<msg time="2025-10-08T11:11:11.980211" level="INFO">${locks} = []</msg>
+<msg time="2025-10-09T23:12:16.754284" level="INFO">${locks} = []</msg>
 <var>${locks}</var>
 <arg>${PROFILE_PATH}</arg>
 <arg>pattern=Singleton*</arg>
 <doc>Wrapper for `List Directory` that returns only files.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.978432" elapsed="0.001779"/>
+<status status="PASS" start="2025-10-09T23:12:16.753344" elapsed="0.000940"/>
 </kw>
 <for flavor="IN">
 <iter>
@@ -142,127 +142,127 @@ taskkill /F /IM msedge.exe</msg>
 <arg>Remove File</arg>
 <arg>${f}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:16.754284" elapsed="0.000000"/>
 </kw>
 <var name="${f}"/>
-<status status="NOT RUN" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:16.754284" elapsed="0.000000"/>
 </iter>
 <var>${f}</var>
 <value>@{locks}</value>
-<status status="NOT RUN" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:16.754284" elapsed="0.000000"/>
 </for>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Remove File" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:11.980211" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data\Default\LOCK"&gt;C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data\Default\LOCK&lt;/a&gt;'.</msg>
+<msg time="2025-10-09T23:12:16.755284" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default\LOCK"&gt;C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default\LOCK&lt;/a&gt;'.</msg>
 <arg>${PROFILE_PATH}${/}LOCK</arg>
 <doc>Removes a file with the given path.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.755284" elapsed="0.001000"/>
 </kw>
 <arg>Remove File</arg>
 <arg>${PROFILE_PATH}${/}LOCK</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.755284" elapsed="0.001000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-08T11:11:11.980211" level="INFO">${opt} = &lt;selenium.webdriver.edge.options.Options object at 0x000001B7703E4450&gt;</msg>
+<msg time="2025-10-09T23:12:16.756284" level="INFO">${opt} = &lt;selenium.webdriver.edge.options.Options object at 0x0000019343CAA930&gt;</msg>
 <var>${opt}</var>
 <arg>__import__('selenium.webdriver.edge.options', fromlist=['Options']).Options()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.756284" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:11.980211" level="INFO">${arg_user} = --user-data-dir=C:\Users\phmartin\AppData\Local\Microsoft\Edge\User Data</msg>
+<msg time="2025-10-09T23:12:16.756284" level="INFO">${arg_user} = --user-data-dir=C:\Users\USER\AppData\Local\Microsoft\Edge\User Data</msg>
 <var>${arg_user}</var>
 <arg>--user-data-dir=${USER_DATA}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.756284" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:11.980211" level="INFO">${arg_prof} = --profile-directory=Default</msg>
+<msg time="2025-10-09T23:12:16.757284" level="INFO">${arg_prof} = --profile-directory=Default</msg>
 <var>${arg_prof}</var>
 <arg>--profile-directory=${LAST_USED}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.757284" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:11.980211" level="INFO">${arg_max} = --start-maximized</msg>
+<msg time="2025-10-09T23:12:16.757284" level="INFO">${arg_max} = --start-maximized</msg>
 <var>${arg_max}</var>
 <arg>--start-maximized</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.757284" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:11.980211" level="INFO">${arg_devshm} = --disable-dev-shm-usage</msg>
+<msg time="2025-10-09T23:12:16.757284" level="INFO">${arg_devshm} = --disable-dev-shm-usage</msg>
 <var>${arg_devshm}</var>
 <arg>--disable-dev-shm-usage</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.757284" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:11.980211" level="INFO">${arg_no_first} = --no-first-run</msg>
+<msg time="2025-10-09T23:12:16.758284" level="INFO">${arg_no_first} = --no-first-run</msg>
 <var>${arg_no_first}</var>
 <arg>--no-first-run</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.758284" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:11.980211" level="INFO">${arg_no_default} = --no-default-browser-check</msg>
+<msg time="2025-10-09T23:12:16.758284" level="INFO">${arg_no_default} = --no-default-browser-check</msg>
 <var>${arg_no_default}</var>
 <arg>--no-default-browser-check</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.758284" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${opt}</arg>
 <arg>add_argument</arg>
 <arg>${arg_user}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.758284" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${opt}</arg>
 <arg>add_argument</arg>
 <arg>${arg_prof}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.758284" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${opt}</arg>
 <arg>add_argument</arg>
 <arg>${arg_max}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.758284" elapsed="0.000999"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${opt}</arg>
 <arg>add_argument</arg>
 <arg>${arg_devshm}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.759283" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${opt}</arg>
 <arg>add_argument</arg>
 <arg>${arg_no_first}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.759283" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${opt}</arg>
 <arg>add_argument</arg>
 <arg>${arg_no_default}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.759283" elapsed="0.000000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-08T11:11:11.980211" level="INFO">&amp;{prefs} = { download.default_directory=C:\Users\phmartin\soundcloud-robot\results\downloads | download.prompt_for_download=False | download.directory_upgrade=True | safebrowsing.enabled=True }</msg>
+<msg time="2025-10-09T23:12:16.760283" level="INFO">&amp;{prefs} = { download.default_directory=C:\Users\USER\PycharmProjects\soundcloud-robot\results\downloads | download.prompt_for_download=False | download.directory_upgrade=True | safebrowsing.enabled=True }</msg>
 <var>&amp;{prefs}</var>
 <arg>download.default_directory=${DOWNLOAD_DIR}</arg>
 <arg>download.prompt_for_download=${False}</arg>
 <arg>download.directory_upgrade=${True}</arg>
 <arg>safebrowsing.enabled=${True}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.759283" elapsed="0.001000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${opt}</arg>
@@ -270,251 +270,251 @@ taskkill /F /IM msedge.exe</msg>
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:16.760283" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:11.980211" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<msg time="2025-10-09T23:12:16.760283" level="INFO">Creating an instance of the Edge WebDriver.</msg>
 <arg>Edge</arg>
 <arg>options=${opt}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-10-08T11:11:11.980211" elapsed="2.885316"/>
+<status status="PASS" start="2025-10-09T23:12:16.760283" elapsed="1.732265"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>${BASE_TIMEOUT}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-10-08T11:11:14.865527" elapsed="0.002015"/>
+<status status="PASS" start="2025-10-09T23:12:18.493545" elapsed="0.002002"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>✅ Edge con perfil real: ${PROFILE_PATH} — Descargas: ${DOWNLOAD_DIR}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-08T11:11:14.867542" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:18.495547" elapsed="0.001000"/>
 </kw>
 <doc>Abre Edge con el perfil por defecto del usuario (último usado). Cierra Edge y elimina locks antes.</doc>
-<status status="PASS" start="2025-10-08T11:11:10.878901" elapsed="3.988641"/>
+<status status="PASS" start="2025-10-09T23:12:16.071528" elapsed="2.426108"/>
 </kw>
-<test id="s1-t1" name="Opcion A - Abrir página de pista y descargar si hay" line="277">
+<test id="s1-t1" name="Opcion A - Abrir página de pista y descargar si hay" line="281">
 <kw name="Open Playlist">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:14.869094" level="INFO">Opening url 'https://soundcloud.com/doncucho/sets/schranz-3'</msg>
+<msg time="2025-10-09T23:12:18.500547" level="INFO">Opening url 'https://soundcloud.com/doncucho/sets/schranz-3'</msg>
 <arg>${PLAYLIST_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-10-08T11:11:14.869094" elapsed="3.065454"/>
+<status status="PASS" start="2025-10-09T23:12:18.500547" elapsed="6.668595"/>
 </kw>
-<status status="PASS" start="2025-10-08T11:11:14.869094" elapsed="3.065454"/>
+<status status="PASS" start="2025-10-09T23:12:18.499546" elapsed="6.669596"/>
 </kw>
 <kw name="Open Track Page And Open More Menu">
 <kw name="Open Track Page By Index">
 <kw name="Ensure Track Item Is Rendered">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:17.943972" level="INFO">${li} = (//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]</msg>
+<msg time="2025-10-09T23:12:25.172145" level="INFO">${li} = (//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]</msg>
 <var>${li}</var>
 <arg>(//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[${n}]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:17.943972" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:25.171143" elapsed="0.001002"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:18.036935" level="INFO">Current page contains element 'xpath=(//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]'.</msg>
+<msg time="2025-10-09T23:12:25.205144" level="INFO">Current page contains element 'xpath=(//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]'.</msg>
 <arg>xpath=${li}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-10-08T11:11:17.943972" elapsed="0.092963"/>
+<status status="PASS" start="2025-10-09T23:12:25.174146" elapsed="0.030998"/>
 </kw>
-<msg time="2025-10-08T11:11:18.036935" level="INFO">${ok} = True</msg>
+<msg time="2025-10-09T23:12:25.205144" level="INFO">${ok} = True</msg>
 <var>${ok}</var>
 <arg>Page Should Contain Element</arg>
 <arg>xpath=${li}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-10-08T11:11:17.943972" elapsed="0.092963"/>
+<status status="PASS" start="2025-10-09T23:12:25.174146" elapsed="0.030998"/>
 </kw>
 <if>
 <branch type="IF" condition="${ok}">
 <break>
-<status status="PASS" start="2025-10-08T11:11:18.036935" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:25.206145" elapsed="0.000000"/>
 </break>
-<status status="PASS" start="2025-10-08T11:11:18.036935" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:25.206145" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2025-10-08T11:11:18.036935" elapsed="0.001001"/>
+<status status="PASS" start="2025-10-09T23:12:25.206145" elapsed="0.000000"/>
 </if>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
 <arg>window.scrollBy(0, 800)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:18.037936" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:25.207153" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>0.2 s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:18.037936" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:25.207153" elapsed="0.000000"/>
 </kw>
 <var name="${i}">0</var>
-<status status="PASS" start="2025-10-08T11:11:17.943972" elapsed="0.093964"/>
+<status status="PASS" start="2025-10-09T23:12:25.173152" elapsed="0.034994"/>
 </iter>
 <var>${i}</var>
 <value>0</value>
 <value>40</value>
-<status status="PASS" start="2025-10-08T11:11:17.943972" elapsed="0.093964"/>
+<status status="PASS" start="2025-10-09T23:12:25.172145" elapsed="0.036001"/>
 </for>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>xpath=${li}</arg>
 <arg>${BASE_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.037936" elapsed="0.012764"/>
+<status status="PASS" start="2025-10-09T23:12:25.208146" elapsed="0.012997"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>xpath=${li}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.050700" elapsed="0.332714"/>
+<status status="PASS" start="2025-10-09T23:12:25.222143" elapsed="0.323586"/>
 </kw>
 <arg>${n}</arg>
-<status status="PASS" start="2025-10-08T11:11:17.943972" elapsed="0.439442"/>
+<status status="PASS" start="2025-10-09T23:12:25.171143" elapsed="0.374586"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:18.384434" level="INFO">${li} = (//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]</msg>
+<msg time="2025-10-09T23:12:25.545729" level="INFO">${li} = (//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]</msg>
 <var>${li}</var>
 <arg>(//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[${n}]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.384434" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:25.545729" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:18.384434" level="INFO">${link} = (//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]//a[contains(@class,'trackItem__trackTitle') or contains(@class,'soundTitle__title') or contains(@href,'/tracks/') or...</msg>
+<msg time="2025-10-09T23:12:25.546770" level="INFO">${link} = (//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]//a[contains(@class,'trackItem__trackTitle') or contains(@class,'soundTitle__title') or contains(@href,'/tracks/') or...</msg>
 <var>${link}</var>
 <arg>${li}//a[contains(@class,'trackItem__trackTitle') or contains(@class,'soundTitle__title') or contains(@href,'/tracks/') or contains(@href,'soundcloud.com/')]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.384434" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:25.546770" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=${link}</arg>
 <arg>${BASE_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.384434" elapsed="0.027950"/>
+<status status="PASS" start="2025-10-09T23:12:25.546770" elapsed="0.028146"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:18.413384" level="INFO">Clicking element 'xpath=(//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]//a[contains(@class,'trackItem__trackTitle') or contains(@class,'soundTitle__title') or contains(@href,'/tracks/') or contains(@href,'soundcloud.com/')]'.</msg>
+<msg time="2025-10-09T23:12:25.574916" level="INFO">Clicking element 'xpath=(//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[3]//a[contains(@class,'trackItem__trackTitle') or contains(@class,'soundTitle__title') or contains(@href,'/tracks/') or contains(@href,'soundcloud.com/')]'.</msg>
 <arg>xpath=${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.413384" elapsed="0.157005"/>
+<status status="PASS" start="2025-10-09T23:12:25.574916" elapsed="0.361403"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more')]</arg>
 <arg>${BASE_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.570389" elapsed="0.290510"/>
+<status status="PASS" start="2025-10-09T23:12:25.936319" elapsed="0.326160"/>
 </kw>
 <arg>${n}</arg>
 <doc>Abre la página de la pista (no comprobamos /tracks/ en la URL; SoundCloud usa /usuario/slug).</doc>
-<status status="PASS" start="2025-10-08T11:11:17.943972" elapsed="0.916927"/>
+<status status="PASS" start="2025-10-09T23:12:25.170142" elapsed="1.092337"/>
 </kw>
 <kw name="Open More Menu On Track Page">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:18.860899" level="INFO">${more_xpath} = //div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more') and (@aria-label='Más' or @aria-label='More')]</msg>
+<msg time="2025-10-09T23:12:26.263488" level="INFO">${more_xpath} = //div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more') and (@aria-label='Más' or @aria-label='More')]</msg>
 <var>${more_xpath}</var>
 <arg>//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more') and (@aria-label='Más' or @aria-label='More')]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.860899" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:26.263488" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>xpath=${more_xpath}</arg>
 <arg>${BASE_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.860899" elapsed="0.029815"/>
+<status status="PASS" start="2025-10-09T23:12:26.263488" elapsed="0.184042"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>xpath=${more_xpath}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.890714" elapsed="0.323757"/>
+<status status="PASS" start="2025-10-09T23:12:26.447530" elapsed="0.757258"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=${more_xpath}</arg>
 <arg>${BASE_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-08T11:11:19.214471" elapsed="0.012086"/>
+<status status="PASS" start="2025-10-09T23:12:27.204788" elapsed="0.238810"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:19.226557" level="INFO">Clicking element 'xpath=//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more') and (@aria-label='Más' or @aria-label='More')]'.</msg>
+<msg time="2025-10-09T23:12:27.444599" level="INFO">Clicking element 'xpath=//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more') and (@aria-label='Más' or @aria-label='More')]'.</msg>
 <arg>xpath=${more_xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T11:11:19.226557" elapsed="0.069724"/>
+<status status="PASS" start="2025-10-09T23:12:27.443598" elapsed="0.172794"/>
 </kw>
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:19.410613" level="INFO">Current page contains element '//div[contains(@class,'dropdown') or contains(@class,'moreActions') or @role='menu' or @role='listbox']'.</msg>
+<msg time="2025-10-09T23:12:27.635391" level="INFO">Current page contains element '//div[contains(@class,'dropdown') or contains(@class,'moreActions') or @role='menu' or @role='listbox']'.</msg>
 <arg>//div[contains(@class,'dropdown') or contains(@class,'moreActions') or @role='menu' or @role='listbox']</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-10-08T11:11:19.296281" elapsed="0.114332"/>
+<status status="PASS" start="2025-10-09T23:12:27.616392" elapsed="0.018999"/>
 </kw>
 <arg>10x</arg>
 <arg>0.3 s</arg>
 <arg>Page Should Contain Element</arg>
 <arg>//div[contains(@class,'dropdown') or contains(@class,'moreActions') or @role='menu' or @role='listbox']</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-10-08T11:11:19.296281" elapsed="0.114332"/>
+<status status="PASS" start="2025-10-09T23:12:27.616392" elapsed="0.018999"/>
 </kw>
 <doc>En la página de pista, abrir el menú de los tres puntitos.</doc>
-<status status="PASS" start="2025-10-08T11:11:18.860899" elapsed="0.550722"/>
+<status status="PASS" start="2025-10-09T23:12:26.263488" elapsed="1.371903"/>
 </kw>
 <arg>${TRACK_NUM}</arg>
-<status status="PASS" start="2025-10-08T11:11:17.934548" elapsed="1.477073"/>
+<status status="PASS" start="2025-10-09T23:12:25.170142" elapsed="2.465249"/>
 </kw>
 <kw name="Extract And Save Track Metadata">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.415546" level="INFO">Slept 1 second.</msg>
+<msg time="2025-10-09T23:12:28.636575" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-08T11:11:19.414678" elapsed="1.000868"/>
+<status status="PASS" start="2025-10-09T23:12:27.636390" elapsed="1.000185"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>//h1[contains(@class,'soundTitle__title')]//span</arg>
 <arg>${BASE_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.415546" elapsed="0.005351"/>
+<status status="PASS" start="2025-10-09T23:12:28.636575" elapsed="0.014952"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:20.448974" level="INFO">${title} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
+<msg time="2025-10-09T23:12:28.715527" level="INFO">${title} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
 <var>${title}</var>
 <arg>xpath=//h1[contains(@class,'soundTitle__title')]//span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.420897" elapsed="0.028077"/>
+<status status="PASS" start="2025-10-09T23:12:28.651527" elapsed="0.064000"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:20.468035" level="INFO">${artist} = AZZIK</msg>
+<msg time="2025-10-09T23:12:28.746526" level="INFO">${artist} = AZZIK</msg>
 <var>${artist}</var>
 <arg>xpath=//h2[contains(@class,'soundTitle__username')]//a</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.448974" elapsed="0.019061"/>
+<status status="PASS" start="2025-10-09T23:12:28.715527" elapsed="0.030999"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:20.471068" level="INFO">Current page contains element 'xpath=(//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//span[contains(@class,'sc-artwork') and contains(@style,'background-image')])[1]'.</msg>
+<msg time="2025-10-09T23:12:28.762544" level="INFO">Current page contains element 'xpath=(//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//span[contains(@class,'sc-artwork') and contains(@style,'background-image')])[1]'.</msg>
 <arg>xpath=(//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//span[contains(@class,'sc-artwork') and contains(@style,'background-image')])[1]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.468035" elapsed="0.003033"/>
+<status status="PASS" start="2025-10-09T23:12:28.747526" elapsed="0.015018"/>
 </kw>
-<msg time="2025-10-08T11:11:20.471068" level="INFO">${style_found} = True</msg>
+<msg time="2025-10-09T23:12:28.762544" level="INFO">${style_found} = True</msg>
 <var>${style_found}</var>
 <arg>Page Should Contain Element</arg>
 <arg>xpath=(//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//span[contains(@class,'sc-artwork') and contains(@style,'background-image')])[1]</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.468035" elapsed="0.003033"/>
+<status status="PASS" start="2025-10-09T23:12:28.747526" elapsed="0.015018"/>
 </kw>
 <if>
 <branch type="IF" condition="${style_found}">
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:20.490856" level="INFO">${style} = background-image: url("https://i1.sndcdn.com/artworks-055Kmswxl0yQVFf5-sQIJiA-t500x500.png"); opacity: 1;</msg>
+<msg time="2025-10-09T23:12:28.784526" level="INFO">${style} = background-image: url("https://i1.sndcdn.com/artworks-055Kmswxl0yQVFf5-sQIJiA-t500x500.png"); opacity: 1;</msg>
 <var>${style}</var>
 <arg>xpath=(//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//span[contains(@class,'sc-artwork') and contains(@style,'background-image')])[1]</arg>
 <arg>style</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.471068" elapsed="0.019788"/>
+<status status="PASS" start="2025-10-09T23:12:28.762544" elapsed="0.021982"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.490856" level="INFO">${img_url} = https://i1.sndcdn.com/artworks-055Kmswxl0yQVFf5-sQIJiA-t500x500.png</msg>
+<msg time="2025-10-09T23:12:28.785527" level="INFO">${img_url} = https://i1.sndcdn.com/artworks-055Kmswxl0yQVFf5-sQIJiA-t500x500.png</msg>
 <var>${img_url}</var>
 <arg>__import__('re').search(r'url\\([\"\\\']?(.*?)[\"\\\']?\\)', r"""${style}""").group(1)</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.490856" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.784526" elapsed="0.001001"/>
 </kw>
-<status status="PASS" start="2025-10-08T11:11:20.471068" elapsed="0.019788"/>
+<status status="PASS" start="2025-10-09T23:12:28.762544" elapsed="0.022983"/>
 </branch>
 <branch type="ELSE">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
@@ -522,7 +522,7 @@ taskkill /F /IM msedge.exe</msg>
 <arg>Page Should Contain Element</arg>
 <arg>xpath=//meta[@property='og:image']</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:20.490856" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.785527" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="${og_found}">
@@ -531,9 +531,9 @@ taskkill /F /IM msedge.exe</msg>
 <arg>xpath=//meta[@property='og:image']</arg>
 <arg>content</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:20.490856" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.785527" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-10-08T11:11:20.490856" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.785527" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
@@ -541,58 +541,58 @@ taskkill /F /IM msedge.exe</msg>
 <arg>xpath=(//img[contains(@class,'image__full')])[1]</arg>
 <arg>src</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:20.499880" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.785527" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-10-08T11:11:20.490856" elapsed="0.009024"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.785527" elapsed="0.000000"/>
 </branch>
-<status status="NOT RUN" start="2025-10-08T11:11:20.490856" elapsed="0.009024"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.785527" elapsed="0.000000"/>
 </if>
-<status status="NOT RUN" start="2025-10-08T11:11:20.490856" elapsed="0.009024"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.785527" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2025-10-08T11:11:20.471068" elapsed="0.028812"/>
+<status status="PASS" start="2025-10-09T23:12:28.762544" elapsed="0.022983"/>
 </if>
 <kw name="_ensure_meta_csv_headers_exist">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.500889" level="INFO">${t_csv} = C:\Users\phmartin\soundcloud-robot\results\meta\titulos.csv</msg>
+<msg time="2025-10-09T23:12:28.786526" level="INFO">${t_csv} = C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\titulos.csv</msg>
 <var>${t_csv}</var>
 <arg>${META_DIR}${/}titulos.csv</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.786526" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.500889" level="INFO">${a_csv} = C:\Users\phmartin\soundcloud-robot\results\meta\artistas.csv</msg>
+<msg time="2025-10-09T23:12:28.786526" level="INFO">${a_csv} = C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\artistas.csv</msg>
 <var>${a_csv}</var>
 <arg>${META_DIR}${/}artistas.csv</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.786526" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="File Should Exist" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:20.500889" level="INFO" html="true">File '&lt;a href="file://C:\Users\phmartin\soundcloud-robot\results\meta\titulos.csv"&gt;C:\Users\phmartin\soundcloud-robot\results\meta\titulos.csv&lt;/a&gt;' exists.</msg>
+<msg time="2025-10-09T23:12:28.787526" level="INFO" html="true">File '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\titulos.csv"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\titulos.csv&lt;/a&gt;' exists.</msg>
 <arg>${t_csv}</arg>
 <doc>Fails unless the given ``path`` points to an existing file.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.787526" elapsed="0.000000"/>
 </kw>
-<msg time="2025-10-08T11:11:20.500889" level="INFO">${t_exists} = True</msg>
+<msg time="2025-10-09T23:12:28.787526" level="INFO">${t_exists} = True</msg>
 <var>${t_exists}</var>
 <arg>File Should Exist</arg>
 <arg>${t_csv}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.786526" elapsed="0.001000"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="File Should Exist" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:20.500889" level="INFO" html="true">File '&lt;a href="file://C:\Users\phmartin\soundcloud-robot\results\meta\artistas.csv"&gt;C:\Users\phmartin\soundcloud-robot\results\meta\artistas.csv&lt;/a&gt;' exists.</msg>
+<msg time="2025-10-09T23:12:28.788526" level="INFO" html="true">File '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\artistas.csv"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\artistas.csv&lt;/a&gt;' exists.</msg>
 <arg>${a_csv}</arg>
 <doc>Fails unless the given ``path`` points to an existing file.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.788526" elapsed="0.000000"/>
 </kw>
-<msg time="2025-10-08T11:11:20.500889" level="INFO">${a_exists} = True</msg>
+<msg time="2025-10-09T23:12:28.788526" level="INFO">${a_exists} = True</msg>
 <var>${a_exists}</var>
 <arg>File Should Exist</arg>
 <arg>${a_csv}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.787526" elapsed="0.001000"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${t_exists}">
@@ -601,11 +601,11 @@ taskkill /F /IM msedge.exe</msg>
 <arg>n,title\n</arg>
 <arg>UTF-8</arg>
 <doc>Creates a file with the given content and encoding.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.789526" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.788526" elapsed="0.001000"/>
 </branch>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.788526" elapsed="0.001000"/>
 </if>
 <if>
 <branch type="IF" condition="not ${a_exists}">
@@ -614,486 +614,928 @@ taskkill /F /IM msedge.exe</msg>
 <arg>n,artist\n</arg>
 <arg>UTF-8</arg>
 <doc>Creates a file with the given content and encoding.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.789526" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:28.789526" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.789526" elapsed="0.000000"/>
 </if>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.786526" elapsed="0.003000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.500889" level="INFO">${t_csv} = C:\Users\phmartin\soundcloud-robot\results\meta\titulos.csv</msg>
+<msg time="2025-10-09T23:12:28.789526" level="INFO">${t_csv} = C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\titulos.csv</msg>
 <var>${t_csv}</var>
 <arg>${META_DIR}${/}titulos.csv</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.789526" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.500889" level="INFO">${a_csv} = C:\Users\phmartin\soundcloud-robot\results\meta\artistas.csv</msg>
+<msg time="2025-10-09T23:12:28.790526" level="INFO">${a_csv} = C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\artistas.csv</msg>
 <var>${a_csv}</var>
 <arg>${META_DIR}${/}artistas.csv</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.789526" elapsed="0.001000"/>
 </kw>
 <kw name="_csv_escape">
 <kw name="Replace String" owner="String">
-<msg time="2025-10-08T11:11:20.500889" level="INFO">${x} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
+<msg time="2025-10-09T23:12:28.790526" level="INFO">${x} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
 <var>${x}</var>
 <arg>${text}</arg>
 <arg>"</arg>
 <arg>""</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.790526" elapsed="0.000000"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-10-08T11:11:20.507991" level="INFO">${x} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
+<msg time="2025-10-09T23:12:28.791526" level="INFO">${x} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
 <var>${x}</var>
 <arg>${x}</arg>
 <arg>\n</arg>
 <arg>${EMPTY}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.007102"/>
+<status status="PASS" start="2025-10-09T23:12:28.790526" elapsed="0.001000"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-10-08T11:11:20.507991" level="INFO">${x} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
+<msg time="2025-10-09T23:12:28.791526" level="INFO">${x} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
 <var>${x}</var>
 <arg>${x}</arg>
 <arg>\r</arg>
 <arg>${EMPTY}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.507991" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.791526" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${x}</value>
-<status status="PASS" start="2025-10-08T11:11:20.507991" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.792526" elapsed="0.000000"/>
 </return>
-<msg time="2025-10-08T11:11:20.507991" level="INFO">${title_q} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
+<msg time="2025-10-09T23:12:28.792526" level="INFO">${title_q} = The Cardigans - My Favourite Game (Azzik Schranz Edit) [FREE DL]</msg>
 <var>${title_q}</var>
 <arg>${title}</arg>
-<status status="PASS" start="2025-10-08T11:11:20.500889" elapsed="0.007102"/>
+<status status="PASS" start="2025-10-09T23:12:28.790526" elapsed="0.002000"/>
 </kw>
 <kw name="_csv_escape">
 <kw name="Replace String" owner="String">
-<msg time="2025-10-08T11:11:20.510005" level="INFO">${x} = AZZIK</msg>
+<msg time="2025-10-09T23:12:28.794539" level="INFO">${x} = AZZIK</msg>
 <var>${x}</var>
 <arg>${text}</arg>
 <arg>"</arg>
 <arg>""</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.507991" elapsed="0.002014"/>
+<status status="PASS" start="2025-10-09T23:12:28.793531" elapsed="0.001008"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-10-08T11:11:20.510005" level="INFO">${x} = AZZIK</msg>
+<msg time="2025-10-09T23:12:28.795538" level="INFO">${x} = AZZIK</msg>
 <var>${x}</var>
 <arg>${x}</arg>
 <arg>\n</arg>
 <arg>${EMPTY}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.510005" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.794539" elapsed="0.000999"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-10-08T11:11:20.511019" level="INFO">${x} = AZZIK</msg>
+<msg time="2025-10-09T23:12:28.795538" level="INFO">${x} = AZZIK</msg>
 <var>${x}</var>
 <arg>${x}</arg>
 <arg>\r</arg>
 <arg>${EMPTY}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.510005" elapsed="0.001014"/>
+<status status="PASS" start="2025-10-09T23:12:28.795538" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${x}</value>
-<status status="PASS" start="2025-10-08T11:11:20.511019" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.796527" elapsed="0.000000"/>
 </return>
-<msg time="2025-10-08T11:11:20.511019" level="INFO">${artist_q} = AZZIK</msg>
+<msg time="2025-10-09T23:12:28.796527" level="INFO">${artist_q} = AZZIK</msg>
 <var>${artist_q}</var>
 <arg>${artist}</arg>
-<status status="PASS" start="2025-10-08T11:11:20.507991" elapsed="0.003028"/>
+<status status="PASS" start="2025-10-09T23:12:28.792526" elapsed="0.004001"/>
 </kw>
 <kw name="Append To File" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:20.515094" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\phmartin\soundcloud-robot\results\meta\titulos.csv"&gt;C:\Users\phmartin\soundcloud-robot\results\meta\titulos.csv&lt;/a&gt;'.</msg>
+<msg time="2025-10-09T23:12:28.797526" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\titulos.csv"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\titulos.csv&lt;/a&gt;'.</msg>
 <arg>${t_csv}</arg>
 <arg>${n},"${title_q}"\n</arg>
 <arg>UTF-8</arg>
 <doc>Appends the given content to the specified file.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.511019" elapsed="0.004075"/>
+<status status="PASS" start="2025-10-09T23:12:28.796527" elapsed="0.000999"/>
 </kw>
 <kw name="Append To File" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:20.527928" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\phmartin\soundcloud-robot\results\meta\artistas.csv"&gt;C:\Users\phmartin\soundcloud-robot\results\meta\artistas.csv&lt;/a&gt;'.</msg>
+<msg time="2025-10-09T23:12:28.798587" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\artistas.csv"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\results\meta\artistas.csv&lt;/a&gt;'.</msg>
 <arg>${a_csv}</arg>
 <arg>${n},"${artist_q}"\n</arg>
 <arg>UTF-8</arg>
 <doc>Appends the given content to the specified file.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.520956" elapsed="0.006972"/>
+<status status="PASS" start="2025-10-09T23:12:28.797526" elapsed="0.002002"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.527928" level="INFO">${ext} = .png</msg>
+<msg time="2025-10-09T23:12:28.800527" level="INFO">${ext} = .png</msg>
 <var>${ext}</var>
 <arg>(lambda u: (__import__('os').path.splitext(__import__('urllib.parse', fromlist=['urlparse']).urlparse(u).path)[1] or '.png'))(r"""${img_url}""")</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.527928" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.799528" elapsed="0.000999"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.527928" level="INFO">${cover} = C:\Users\phmartin\soundcloud-robot\results\portadas\3.png</msg>
+<msg time="2025-10-09T23:12:28.800527" level="INFO">${cover} = C:\Users\USER\PycharmProjects\soundcloud-robot\results\portadas\3.png</msg>
 <var>${cover}</var>
 <arg>${COVERS_DIR}${/}${n}${ext}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.527928" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.800527" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
 <arg>__import__('urllib.request', fromlist=['urlretrieve']).urlretrieve(r"""${img_url}""", r"""${cover}""")</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.527928" elapsed="0.263007"/>
+<status status="PASS" start="2025-10-09T23:12:28.800527" elapsed="0.077999"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>💾 Guardado meta en CSVs y portada: ${cover}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.790935" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.878526" elapsed="0.001002"/>
 </kw>
 <arg>${TRACK_NUM}</arg>
 <doc>Desde la página de pista, extrae título, artista y portada, guarda CSVs y descarga la portada.</doc>
-<status status="PASS" start="2025-10-08T11:11:19.413638" elapsed="1.377297"/>
+<status status="PASS" start="2025-10-09T23:12:27.636390" elapsed="1.243138"/>
 </kw>
 <kw name="Download If Available">
 <kw name="Get File Count In Dir">
 <kw name="List Files In Directory" owner="OperatingSystem">
-<msg time="2025-10-08T11:11:20.800955" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\phmartin\soundcloud-robot\results\downloads"&gt;C:\Users\phmartin\soundcloud-robot\results\downloads&lt;/a&gt;'.</msg>
-<msg time="2025-10-08T11:11:20.800955" level="INFO">1 file:
-C:\Users\phmartin\soundcloud-robot\results\downloads\PropangasKoala_TrackohneName_MIT_zusatz_Synths_MASTER.wav</msg>
-<msg time="2025-10-08T11:11:20.800955" level="INFO">${files} = ['C:\\Users\\phmartin\\soundcloud-robot\\results\\downloads\\PropangasKoala_TrackohneName_MIT_zusatz_Synths_MASTER.wav']</msg>
+<msg time="2025-10-09T23:12:28.881526" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\results\downloads"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\results\downloads&lt;/a&gt;'.</msg>
+<msg time="2025-10-09T23:12:28.881526" level="INFO">0 files:
+</msg>
+<msg time="2025-10-09T23:12:28.881526" level="INFO">${files} = []</msg>
 <var>${files}</var>
 <arg>${DOWNLOAD_DIR}</arg>
 <arg>absolute=True</arg>
 <doc>Wrapper for `List Directory` that returns only files.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.800955" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.880528" elapsed="0.000998"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.800955" level="INFO">Length is 1.</msg>
-<msg time="2025-10-08T11:11:20.800955" level="INFO">${count} = 1</msg>
+<msg time="2025-10-09T23:12:28.881526" level="INFO">Length is 0.</msg>
+<msg time="2025-10-09T23:12:28.881526" level="INFO">${count} = 0</msg>
 <var>${count}</var>
 <arg>${files}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.800955" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.881526" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${count}</value>
-<status status="PASS" start="2025-10-08T11:11:20.800955" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.881526" elapsed="0.000000"/>
 </return>
-<msg time="2025-10-08T11:11:20.800955" level="INFO">${before} = 1</msg>
+<msg time="2025-10-09T23:12:28.882527" level="INFO">${before} = 0</msg>
 <var>${before}</var>
-<status status="PASS" start="2025-10-08T11:11:20.800955" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.880528" elapsed="0.001999"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:20.800955" level="INFO">${download_any} = ["//button[contains(@class,'sc-button-download')]", "| //button[.//span[normalize-space(.)='Download']]", "| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-spa...</msg>
+<msg time="2025-10-09T23:12:28.882527" level="INFO">${download_any} = ["//button[contains(@class,'sc-button-download')]", "| //button[.//span[normalize-space(.)='Download']]", "| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-spa...</msg>
 <var>${download_any}</var>
 <arg>//button[contains(@class,'sc-button-download')]</arg>
 <arg>| //button[.//span[normalize-space(.)='Download']]</arg>
 <arg>| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-space(.),'Download') or contains(@href,'/download'))]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.800955" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:28.882527" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:21.060882" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-10-08T11:11:21.060882" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ["//button[contains(@class,'sc-button-download')]", "| //button[.//span[normalize-space(.)='Download']]", "| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-space(.),'Download') or contains(@href,'/download'))]"] because of the following error:
+<msg time="2025-10-09T23:12:29.080710" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-09T23:12:29.080710" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ["//button[contains(@class,'sc-button-download')]", "| //button[.//span[normalize-space(.)='Download']]", "| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-space(.),'Download') or contains(@href,'/download'))]"] because of the following error:
 SyntaxError: Failed to execute 'evaluate' on 'Document': The string '["//button[contains(@class,'sc-button-download')]", "| //button[.//span[normalize-space(.)='Download']]", "| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-space(.),'Download') or contains(@href,'/download'))]"]' is not a valid XPath expression.
   (Session info: MicrosoftEdge=141.0.3537.57); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
 Stacktrace:
-	GetHandleVerifier [0x0x7ff6b5b62a15+51877]
-	GetHandleVerifier [0x0x7ff6b5b62a74+51972]
-	GetHandleVerifier [0x0x7ff6b5d193c5+1848405]
-	(No symbol) [0x0x7ff6b58d7c7e]
-	(No symbol) [0x0x7ff6b58da54f]
-	(No symbol) [0x0x7ff6b58da60f]
-	(No symbol) [0x0x7ff6b591ffde]
-	(No symbol) [0x0x7ff6b592071b]
-	(No symbol) [0x0x7ff6b5961957]
-	(No symbol) [0x0x7ff6b594216f]
-	(No symbol) [0x0x7ff6b591667b]
-	(No symbol) [0x0x7ff6b595f3d2]
-	(No symbol) [0x0x7ff6b5941df3]
-	(No symbol) [0x0x7ff6b5915b36]
-	(No symbol) [0x0x7ff6b5914d80]
-	(No symbol) [0x0x7ff6b5915973]
-	(No symbol) [0x0x7ff6b59de4a5]
-	(No symbol) [0x0x7ff6b59da75d]
-	GetHandleVerifier [0x0x7ff6b5b8d253+226019]
-	GetHandleVerifier [0x0x7ff6b5b7c421+156849]
-	GetHandleVerifier [0x0x7ff6b5b84919+190889]
-	GetHandleVerifier [0x0x7ff6b5b69b54+80868]
-	GetHandleVerifier [0x0x7ff6b5b69ca3+81203]
-	GetHandleVerifier [0x0x7ff6b5b58226+8886]
-	BaseThreadInitThunk [0x0x7ffd7fc0e8d7+23]
-	RtlUserThreadStart [0x0x7ffd811c8d9c+44]
+	GetHandleVerifier [0x0x7ff699032a15+51877]
+	GetHandleVerifier [0x0x7ff699032a74+51972]
+	GetHandleVerifier [0x0x7ff6991e93c5+1848405]
+	(No symbol) [0x0x7ff698da7c7e]
+	(No symbol) [0x0x7ff698daa54f]
+	(No symbol) [0x0x7ff698daa60f]
+	(No symbol) [0x0x7ff698deffde]
+	(No symbol) [0x0x7ff698df071b]
+	(No symbol) [0x0x7ff698e31957]
+	(No symbol) [0x0x7ff698e1216f]
+	(No symbol) [0x0x7ff698de667b]
+	(No symbol) [0x0x7ff698e2f3d2]
+	(No symbol) [0x0x7ff698e11df3]
+	(No symbol) [0x0x7ff698de5b36]
+	(No symbol) [0x0x7ff698de4d80]
+	(No symbol) [0x0x7ff698de5973]
+	(No symbol) [0x0x7ff698eae4a5]
+	(No symbol) [0x0x7ff698eaa75d]
+	GetHandleVerifier [0x0x7ff69905d253+226019]
+	GetHandleVerifier [0x0x7ff69904c421+156849]
+	GetHandleVerifier [0x0x7ff699054919+190889]
+	GetHandleVerifier [0x0x7ff699039b54+80868]
+	GetHandleVerifier [0x0x7ff699039ca3+81203]
+	GetHandleVerifier [0x0x7ff699028226+8886]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
 </msg>
 <arg>xpath=${download_any}</arg>
 <arg>5 s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="FAIL" start="2025-10-08T11:11:20.800955" elapsed="0.304787">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ["//button[contains(@class,'sc-button-download')]", "| //button[.//span[normalize-space(.)='Download']]", "| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-space(.),'Download') or contains(@href,'/download'))]"] because of the following error:
+<status status="FAIL" start="2025-10-09T23:12:28.882527" elapsed="0.202179">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ["//button[contains(@class,'sc-button-download')]", "| //button[.//span[normalize-space(.)='Download']]", "| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-space(.),'Download') or contains(@href,'/download'))]"] because of the following error:
 SyntaxError: Failed to execute 'evaluate' on 'Document': The string '["//button[contains(@class,'sc-button-download')]", "| //button[.//span[normalize-space(.)='Download']]", "| //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-space(.),'Download') or contains(@href,'/download'))]"]' is not a valid XPath expression.
   (Session info: MicrosoftEdge=141.0.3537.57); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
 Stacktrace:
-	GetHandleVerifier [0x0x7ff6b5b62a15+51877]
-	GetHandleVerifier [0x0x7ff6b5b62a74+51972]
-	GetHandleVerifier [0x0x7ff6b5d193c5+1848405]
-	(No symbol) [0x0x7ff6b58d7c7e]
-	(No symbol) [0x0x7ff6b58da54f]
+	GetHandleVerifier [0x0x7ff699032a15+51877]
+	GetHandleVerifier [0x0x7ff699032a74+51972]
+	GetHandleVerifier [0x0x7ff6991e93c5+1848405]
+	(No symbol) [0x0x7ff698da7c7e]
+	(No symbol) [0x0x7ff698daa54f]
     [ Message content over the limit has been removed. ]
-	(No symbol) [0x0x7ff6b591ffde]
-	(No symbol) [0x0x7ff6b592071b]
-	(No symbol) [0x0x7ff6b5961957]
-	(No symbol) [0x0x7ff6b594216f]
-	(No symbol) [0x0x7ff6b591667b]
-	(No symbol) [0x0x7ff6b595f3d2]
-	(No symbol) [0x0x7ff6b5941df3]
-	(No symbol) [0x0x7ff6b5915b36]
-	(No symbol) [0x0x7ff6b5914d80]
-	(No symbol) [0x0x7ff6b5915973]
-	(No symbol) [0x0x7ff6b59de4a5]
-	(No symbol) [0x0x7ff6b59da75d]
-	GetHandleVerifier [0x0x7ff6b5b8d253+226019]
-	GetHandleVerifier [0x0x7ff6b5b7c421+156849]
-	GetHandleVerifier [0x0x7ff6b5b84919+190889]
-	GetHandleVerifier [0x0x7ff6b5b69b54+80868]
-	GetHandleVerifier [0x0x7ff6b5b69ca3+81203]
-	GetHandleVerifier [0x0x7ff6b5b58226+8886]
-	BaseThreadInitThunk [0x0x7ffd7fc0e8d7+23]
-	RtlUserThreadStart [0x0x7ffd811c8d9c+44]</status>
+	(No symbol) [0x0x7ff698deffde]
+	(No symbol) [0x0x7ff698df071b]
+	(No symbol) [0x0x7ff698e31957]
+	(No symbol) [0x0x7ff698e1216f]
+	(No symbol) [0x0x7ff698de667b]
+	(No symbol) [0x0x7ff698e2f3d2]
+	(No symbol) [0x0x7ff698e11df3]
+	(No symbol) [0x0x7ff698de5b36]
+	(No symbol) [0x0x7ff698de4d80]
+	(No symbol) [0x0x7ff698de5973]
+	(No symbol) [0x0x7ff698eae4a5]
+	(No symbol) [0x0x7ff698eaa75d]
+	GetHandleVerifier [0x0x7ff69905d253+226019]
+	GetHandleVerifier [0x0x7ff69904c421+156849]
+	GetHandleVerifier [0x0x7ff699054919+190889]
+	GetHandleVerifier [0x0x7ff699039b54+80868]
+	GetHandleVerifier [0x0x7ff699039ca3+81203]
+	GetHandleVerifier [0x0x7ff699028226+8886]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]</status>
 </kw>
-<msg time="2025-10-08T11:11:21.105742" level="INFO">${present} = False</msg>
+<msg time="2025-10-09T23:12:29.084706" level="INFO">${present} = False</msg>
 <var>${present}</var>
 <arg>Wait Until Page Contains Element</arg>
 <arg>xpath=${download_any}</arg>
 <arg>5 s</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-10-08T11:11:20.800955" elapsed="0.304787"/>
+<status status="PASS" start="2025-10-09T23:12:28.882527" elapsed="0.202179"/>
 </kw>
 <if>
 <branch type="IF" condition="${present}">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>xpath=${download_any}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:21.106740" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.085738" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>✅ Click en “Download”</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:21.106740" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.085738" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-10-08T11:11:21.105742" elapsed="0.000998"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.084706" elapsed="0.001032"/>
 </branch>
 <branch type="ELSE">
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:21.107740" level="INFO">Sending key(s) ('ESC',) to page.</msg>
-<msg time="2025-10-08T11:11:21.107740" level="INFO">Pressing special key ESCAPE to browser.</msg>
-<msg time="2025-10-08T11:11:21.107740" level="INFO">Releasing special key ESCAPE.</msg>
+<msg time="2025-10-09T23:12:29.085738" level="INFO">Sending key(s) ('ESC',) to page.</msg>
+<msg time="2025-10-09T23:12:29.085738" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg time="2025-10-09T23:12:29.085738" level="INFO">Releasing special key ESCAPE.</msg>
 <arg>NONE</arg>
 <arg>ESC</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.106740" elapsed="0.010485"/>
+<status status="PASS" start="2025-10-09T23:12:29.085738" elapsed="0.013261"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-08T11:11:21.421252" level="INFO">Slept 300 milliseconds.</msg>
+<msg time="2025-10-09T23:12:29.400344" level="INFO">Slept 300 milliseconds.</msg>
 <arg>0.3 s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.117225" elapsed="0.304027"/>
+<status status="PASS" start="2025-10-09T23:12:29.100018" elapsed="0.300326"/>
 </kw>
 <kw name="Click Purchase Link If Hypeddit">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-08T11:11:21.421252" level="INFO">${purchase} = //a[contains(@class,'soundActions__purchaseLink')]</msg>
+<msg time="2025-10-09T23:12:29.401859" level="INFO">${purchase} = //a[contains(@class,'soundActions__purchaseLink')]</msg>
 <var>${purchase}</var>
 <arg>//a[contains(@class,'soundActions__purchaseLink')]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.421252" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.400896" elapsed="0.000963"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:21.433995" level="INFO">Current page contains element 'xpath=//a[contains(@class,'soundActions__purchaseLink')]'.</msg>
+<msg time="2025-10-09T23:12:29.420557" level="INFO">Current page contains element 'xpath=//a[contains(@class,'soundActions__purchaseLink')]'.</msg>
 <arg>xpath=${purchase}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.421252" elapsed="0.012743"/>
+<status status="PASS" start="2025-10-09T23:12:29.401859" elapsed="0.018698"/>
 </kw>
-<msg time="2025-10-08T11:11:21.433995" level="INFO">${exists} = True</msg>
+<msg time="2025-10-09T23:12:29.420557" level="INFO">${exists} = True</msg>
 <var>${exists}</var>
 <arg>Page Should Contain Element</arg>
 <arg>xpath=${purchase}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.421252" elapsed="0.012743"/>
+<status status="PASS" start="2025-10-09T23:12:29.401859" elapsed="0.018698"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${exists}">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>🔎 No hay botón de descarga externa en esta pista</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:21.440648" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.420557" elapsed="0.000000"/>
 </kw>
 <return>
 <value>None</value>
-<status status="NOT RUN" start="2025-10-08T11:11:21.440648" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.420557" elapsed="0.000000"/>
 </return>
-<status status="NOT RUN" start="2025-10-08T11:11:21.433995" elapsed="0.006653"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.420557" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2025-10-08T11:11:21.433995" elapsed="0.006653"/>
+<status status="PASS" start="2025-10-09T23:12:29.420557" elapsed="0.000000"/>
 </if>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:21.450792" level="INFO">${href} = https://gate.sc/?url=https%3A%2F%2Fhypeddit.com%2Fazzik%2Fthecardigansmyfavouritegameazzikschranzedit&amp;token=d55ea9-1-1759914678872</msg>
+<msg time="2025-10-09T23:12:29.439521" level="INFO">${href} = https://gate.sc/?url=https%3A%2F%2Fhypeddit.com%2Fazzik%2Fthecardigansmyfavouritegameazzikschranzedit&amp;token=16323e-1-1760044346276</msg>
 <var>${href}</var>
 <arg>xpath=${purchase}</arg>
 <arg>href</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.440648" elapsed="0.010144"/>
+<status status="PASS" start="2025-10-09T23:12:29.421519" elapsed="0.018002"/>
 </kw>
 <kw name="Resolve Link To Final Url And Domain">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-08T11:11:21.450792" level="INFO">${final_url} = https://hypeddit.com/azzik/thecardigansmyfavouritegameazzikschranzedit</msg>
+<msg time="2025-10-09T23:12:29.440517" level="INFO">${final_url} = https://hypeddit.com/azzik/thecardigansmyfavouritegameazzikschranzedit</msg>
 <var>${final_url}</var>
 <arg>(lambda h:(lambda up:( up.unquote(up.parse_qs(up.urlparse(h).query).get('url',[''])[0]) if 'gate.sc' in up.urlparse(h).netloc else h ))(__import__('urllib.parse', fromlist=['urlparse','parse_qs','unquote'])))(r"""${href}""")</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.450792" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.440517" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-08T11:11:21.450792" level="INFO">${domain} = hypeddit.com</msg>
+<msg time="2025-10-09T23:12:29.441518" level="INFO">${domain} = hypeddit.com</msg>
 <var>${domain}</var>
 <arg>__import__('urllib.parse', fromlist=['urlparse']).urlparse(r"""${final_url}""").netloc.lower()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.450792" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.441518" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${final_url}</value>
 <value>${domain}</value>
-<status status="PASS" start="2025-10-08T11:11:21.450792" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.441518" elapsed="0.000000"/>
 </return>
-<msg time="2025-10-08T11:11:21.460770" level="INFO">${final_url} = https://hypeddit.com/azzik/thecardigansmyfavouritegameazzikschranzedit</msg>
-<msg time="2025-10-08T11:11:21.460770" level="INFO">${domain} = hypeddit.com</msg>
+<msg time="2025-10-09T23:12:29.441518" level="INFO">${final_url} = https://hypeddit.com/azzik/thecardigansmyfavouritegameazzikschranzedit</msg>
+<msg time="2025-10-09T23:12:29.441518" level="INFO">${domain} = hypeddit.com</msg>
 <var>${final_url}</var>
 <var>${domain}</var>
 <arg>${href}</arg>
-<status status="PASS" start="2025-10-08T11:11:21.450792" elapsed="0.009978"/>
+<status status="PASS" start="2025-10-09T23:12:29.439521" elapsed="0.001997"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>🔗 Enlace externo detectado → ${domain}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.460770" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.441518" elapsed="0.000999"/>
 </kw>
 <if>
 <branch type="IF" condition="'hypeddit.com' in '${domain}'">
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:21.460770" level="INFO">${before} = ['323174D8678CA5B1E5A2DA4D6D7BC921']</msg>
+<msg time="2025-10-09T23:12:29.445523" level="INFO">${before} = ['46DBC660C86B077244EB4EDCC70DF823']</msg>
 <var>${before}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.460770" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.442517" elapsed="0.003006"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-10-08T11:11:21.460770" level="INFO">Length is 1.</msg>
-<msg time="2025-10-08T11:11:21.460770" level="INFO">${prev} = 1</msg>
+<msg time="2025-10-09T23:12:29.445523" level="INFO">Length is 1.</msg>
+<msg time="2025-10-09T23:12:29.446523" level="INFO">${prev} = 1</msg>
 <var>${prev}</var>
 <arg>${before}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.460770" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.445523" elapsed="0.001000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:21.460770" level="INFO">Clicking element 'xpath=//a[contains(@class,'soundActions__purchaseLink')]'.</msg>
+<msg time="2025-10-09T23:12:29.448584" level="INFO">Clicking element 'xpath=//a[contains(@class,'soundActions__purchaseLink')]'.</msg>
 <arg>xpath=${purchase}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.460770" elapsed="0.116859"/>
+<status status="PASS" start="2025-10-09T23:12:29.446523" elapsed="0.181354"/>
 </kw>
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Window Count Should Be Greater">
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:21.589224" level="INFO">${handles} = ['323174D8678CA5B1E5A2DA4D6D7BC921', 'B3506031F937EBFC1782B9383F8FE8A6']</msg>
+<msg time="2025-10-09T23:12:29.651860" level="INFO">${handles} = ['46DBC660C86B077244EB4EDCC70DF823', '49704CFCCDC64D9CC6AF55C5447C88A3']</msg>
 <var>${handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.578642" elapsed="0.010582"/>
+<status status="PASS" start="2025-10-09T23:12:29.629866" elapsed="0.021994"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-10-08T11:11:21.589224" level="INFO">Length is 2.</msg>
-<msg time="2025-10-08T11:11:21.589224" level="INFO">${n} = 2</msg>
+<msg time="2025-10-09T23:12:29.651860" level="INFO">Length is 2.</msg>
+<msg time="2025-10-09T23:12:29.652859" level="INFO">${n} = 2</msg>
 <var>${n}</var>
 <arg>${handles}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.589224" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.651860" elapsed="0.000999"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${n} &gt; ${prev}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.589224" elapsed="0.001513"/>
+<status status="PASS" start="2025-10-09T23:12:29.652859" elapsed="0.000000"/>
 </kw>
 <arg>${prev}</arg>
-<status status="PASS" start="2025-10-08T11:11:21.578642" elapsed="0.012095"/>
+<status status="PASS" start="2025-10-09T23:12:29.629866" elapsed="0.022993"/>
 </kw>
 <arg>20x</arg>
 <arg>0.5 s</arg>
 <arg>Window Count Should Be Greater</arg>
 <arg>${prev}</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-10-08T11:11:21.577629" elapsed="0.013108"/>
+<status status="PASS" start="2025-10-09T23:12:29.628866" elapsed="0.023993"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
-<msg time="2025-10-08T11:11:29.678398" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-10-08T11:11:29.678398" level="FAIL">No window matching handle, name, title or URL 'index=-1' found.</msg>
-<arg>index=-1</arg>
+<arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="FAIL" start="2025-10-08T11:11:21.590737" elapsed="8.102360">No window matching handle, name, title or URL 'index=-1' found.</status>
+<status status="PASS" start="2025-10-09T23:12:29.652859" elapsed="0.004002"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>✅ Abierto Hypeddit en nueva pestaña: ${final_url}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:29.693097" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.656861" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${final_url}</value>
-<status status="NOT RUN" start="2025-10-08T11:11:29.693097" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-09T23:12:29.656861" elapsed="0.000999"/>
 </return>
-<status status="FAIL" start="2025-10-08T11:11:21.460770" elapsed="8.233337">No window matching handle, name, title or URL 'index=-1' found.</status>
+<status status="PASS" start="2025-10-09T23:12:29.442517" elapsed="0.215343"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>⚠️ Enlace externo NO permitido: ${domain} (no se abre)</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:29.694107" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.657860" elapsed="0.000000"/>
 </kw>
 <return>
 <value>None</value>
-<status status="NOT RUN" start="2025-10-08T11:11:29.694618" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.657860" elapsed="0.000000"/>
 </return>
-<status status="NOT RUN" start="2025-10-08T11:11:29.694107" elapsed="0.000511"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.657860" elapsed="0.000000"/>
 </branch>
-<status status="FAIL" start="2025-10-08T11:11:21.460770" elapsed="8.233848">No window matching handle, name, title or URL 'index=-1' found.</status>
+<status status="PASS" start="2025-10-09T23:12:29.442517" elapsed="0.215343"/>
 </if>
+<msg time="2025-10-09T23:12:29.657860" level="INFO">${opened} = https://hypeddit.com/azzik/thecardigansmyfavouritegameazzikschranzedit</msg>
 <var>${opened}</var>
 <doc>Busca el botón externo en la página de pista y lo abre SÓLO si el destino es hypeddit.com.</doc>
-<status status="FAIL" start="2025-10-08T11:11:21.421252" elapsed="8.273366">No window matching handle, name, title or URL 'index=-1' found.</status>
+<status status="PASS" start="2025-10-09T23:12:29.400896" elapsed="0.256964"/>
 </kw>
+<return>
+<value>${opened}</value>
+<status status="PASS" start="2025-10-09T23:12:29.657860" elapsed="0.000000"/>
+</return>
 <if>
 <branch type="IF" condition="'${opened}'=='None'">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>❌ NO HAY DESCARGA ni enlace Hypeddit permitido</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:29.694618" elapsed="0.000507"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.658860" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-10-08T11:11:29.694618" elapsed="0.000507"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.657860" elapsed="0.001000"/>
 </branch>
-<status status="NOT RUN" start="2025-10-08T11:11:29.694618" elapsed="0.000507"/>
+<status status="NOT RUN" start="2025-10-09T23:12:29.657860" elapsed="0.001000"/>
 </if>
-<status status="FAIL" start="2025-10-08T11:11:21.106740" elapsed="8.588385">No window matching handle, name, title or URL 'index=-1' found.</status>
+<status status="PASS" start="2025-10-09T23:12:29.085738" elapsed="0.573122"/>
 </branch>
-<status status="FAIL" start="2025-10-08T11:11:21.105742" elapsed="8.589383">No window matching handle, name, title or URL 'index=-1' found.</status>
+<status status="PASS" start="2025-10-09T23:12:29.084706" elapsed="0.574154"/>
 </if>
+<msg time="2025-10-09T23:12:29.658860" level="INFO">${hyp_url} = https://hypeddit.com/azzik/thecardigansmyfavouritegameazzikschranzedit</msg>
+<var>${hyp_url}</var>
 <doc>Intenta “Download”. Si no existe, abre enlace externo SOLO si es Hypeddit.</doc>
-<status status="FAIL" start="2025-10-08T11:11:20.790935" elapsed="8.904190">No window matching handle, name, title or URL 'index=-1' found.</status>
+<status status="PASS" start="2025-10-09T23:12:28.880528" elapsed="0.778332"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Run Hypeddit Flow" owner="hypeddit">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-10-09T23:12:29.661861" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\results\downloads"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\results\downloads&lt;/a&gt;' already exists.</msg>
+<arg>${download_dir}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-10-09T23:12:29.661861" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=#downloadProcess</arg>
+<arg>${PAGE_WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-09T23:12:29.661861" elapsed="2.849566"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:33.212158" level="INFO">Slept 700 milliseconds.</msg>
+<arg>${SHORT_PAUSE}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:32.511427" elapsed="0.700731"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>css=#downloadProcess</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-10-09T23:12:33.212158" elapsed="0.289473"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:33.501631" level="INFO">Clicking element 'css=#downloadProcess'.</msg>
+<arg>css=#downloadProcess</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:33.501631" elapsed="0.143677"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:34.347315" level="INFO">Slept 700 milliseconds.</msg>
+<arg>${SHORT_PAUSE}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:33.645308" elapsed="0.702007"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=#sc_comment_text</arg>
+<arg>${PAGE_WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-09T23:12:34.347315" elapsed="0.012531"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:34.360883" level="INFO">Typing text 'fire' into text field 'css=#sc_comment_text'.</msg>
+<arg>css=#sc_comment_text</arg>
+<arg>${comment_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:34.360883" elapsed="0.111628"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:35.172914" level="INFO">Slept 700 milliseconds.</msg>
+<arg>${SHORT_PAUSE}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:34.472511" elapsed="0.700403"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:35.173467" level="INFO">Clicking element 'css=#login_to_sc'.</msg>
+<arg>css=#login_to_sc</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:35.172914" elapsed="0.206647"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Esperando popup de SoundCloud… ⌛</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-09T23:12:35.379561" elapsed="0.001004"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:35.422563" level="INFO">${handles_before} = ['46DBC660C86B077244EB4EDCC70DF823', '49704CFCCDC64D9CC6AF55C5447C88A3', 'B04B550A4A1DAA00CF760868E1A29082']</msg>
+<var>${handles_before}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-10-09T23:12:35.380565" elapsed="0.043000"/>
+</kw>
+<kw name="Switch To Last Window" owner="hypeddit">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:35.427563" level="INFO">${handles} = ['46DBC660C86B077244EB4EDCC70DF823', '49704CFCCDC64D9CC6AF55C5447C88A3', 'B04B550A4A1DAA00CF760868E1A29082']</msg>
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-10-09T23:12:35.424569" elapsed="0.002994"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-09T23:12:35.428560" level="INFO">${last} = 2</msg>
+<var>${last}</var>
+<arg>len($handles)-1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-09T23:12:35.427563" elapsed="0.000997"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${handles}[${last}]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:35.428560" elapsed="0.524092"/>
+</kw>
+<status status="PASS" start="2025-10-09T23:12:35.423565" elapsed="0.530079"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:36.953917" level="INFO">Slept 1 second.</msg>
+<arg>${AFTER_SWITCH_PAUSE}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:35.953644" elapsed="1.000273"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=#submit_approval</arg>
+<arg>${PAGE_WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-09T23:12:36.953917" elapsed="0.019585"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:36.973502" level="INFO">Clicking button 'css=#submit_approval'.</msg>
+<arg>css=#submit_approval</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:36.973502" elapsed="0.099053"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:37.774464" level="INFO">Slept 700 milliseconds.</msg>
+<arg>${SHORT_PAUSE}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:37.072555" elapsed="0.701909"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>url:${hypeddit_url}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:37.774464" elapsed="0.487009"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Fin Paso "Connect" 🧩</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-09T23:12:38.261473" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=#instagram_status</arg>
+<arg>${PAGE_WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-09T23:12:38.262471" elapsed="0.011999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:38.275469" level="INFO">Clicking element 'css=#instagram_status'.</msg>
+<arg>css=#instagram_status</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:38.274470" elapsed="0.186022"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Botón Instagram clickado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-09T23:12:38.460492" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:39.161677" level="INFO">Slept 700 milliseconds.</msg>
+<arg>${SHORT_PAUSE}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:38.460492" elapsed="0.701185"/>
+</kw>
+<kw name="Switch To Last Window" owner="hypeddit">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:39.226397" level="INFO">${handles} = ['46DBC660C86B077244EB4EDCC70DF823', '49704CFCCDC64D9CC6AF55C5447C88A3', '61F97DF1595E27537148B02DA5F802F0']</msg>
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-10-09T23:12:39.162677" elapsed="0.063720"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-09T23:12:39.227397" level="INFO">${last} = 2</msg>
+<var>${last}</var>
+<arg>len($handles)-1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-09T23:12:39.226397" elapsed="0.001000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${handles}[${last}]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:39.227397" elapsed="0.232077"/>
+</kw>
+<status status="PASS" start="2025-10-09T23:12:39.161677" elapsed="0.297797"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:40.460826" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:39.459474" elapsed="1.001352"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-10-09T23:12:40.460826" elapsed="0.068785"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Popup de Instagram cerrado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-09T23:12:40.529611" elapsed="0.001000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:41.232436" level="INFO">Slept 700 milliseconds.</msg>
+<arg>${SHORT_PAUSE}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:40.530611" elapsed="0.701825"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>url:${hypeddit_url}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:41.232436" elapsed="0.138317"/>
+</kw>
+<kw name="Click Visible Next" owner="hypeddit">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:41.400755" level="INFO">Element 'css=#skipper_ig_next' is displayed.</msg>
+<arg>css=#skipper_ig_next</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-09T23:12:41.372756" elapsed="0.028998"/>
+</kw>
+<msg time="2025-10-09T23:12:41.401754" level="INFO">${next1} = True</msg>
+<var>${next1}</var>
+<arg>Element Should Be Visible</arg>
+<arg>css=#skipper_ig_next</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-09T23:12:41.371756" elapsed="0.029998"/>
+</kw>
+<if>
+<branch type="IF" condition="${next1}">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>css=#skipper_ig_next</arg>
+<arg>${BASE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-10-09T23:12:41.401754" elapsed="0.024999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:41.426753" level="INFO">Clicking element 'css=#skipper_ig_next'.</msg>
+<arg>css=#skipper_ig_next</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:41.426753" elapsed="0.080005"/>
+</kw>
+<return>
+<status status="PASS" start="2025-10-09T23:12:41.506758" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2025-10-09T23:12:41.401754" elapsed="0.105004"/>
+</branch>
+<status status="PASS" start="2025-10-09T23:12:41.401754" elapsed="0.105004"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${next2}</var>
+<arg>Element Should Be Visible</arg>
+<arg>css=#skipper_ig_channel</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2025-10-09T23:12:41.506758" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${next2}">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>css=#skipper_ig_channel</arg>
+<arg>${BASE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-10-09T23:12:41.507756" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<var>${ok}</var>
+<var>${_}</var>
+<arg>Click Element</arg>
+<arg>css=#skipper_ig_channel</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="NOT RUN" start="2025-10-09T23:12:41.507756" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${ok}'=='PASS'">
+<return>
+<status status="NOT RUN" start="2025-10-09T23:12:41.507756" elapsed="0.000000"/>
+</return>
+<status status="NOT RUN" start="2025-10-09T23:12:41.507756" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2025-10-09T23:12:41.507756" elapsed="0.000000"/>
+</if>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.getElementById('skipper_ig_channel')?.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-10-09T23:12:41.508755" elapsed="0.000000"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2025-10-09T23:12:41.508755" elapsed="0.000000"/>
+</return>
+<status status="NOT RUN" start="2025-10-09T23:12:41.506758" elapsed="0.001997"/>
+</branch>
+<status status="NOT RUN" start="2025-10-09T23:12:41.506758" elapsed="0.001997"/>
+</if>
+<kw name="Fail" owner="BuiltIn">
+<arg>No hay botón Next visible (ni #skipper_ig_next ni #skipper_ig_channel).</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-10-09T23:12:41.508755" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-10-09T23:12:41.370753" elapsed="0.138002"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Fin Paso Instagram</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-09T23:12:41.509754" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=#gateDownloadButton</arg>
+<arg>${PAGE_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-09T23:12:41.510768" elapsed="0.024985"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:42.236671" level="INFO">Slept 700 milliseconds.</msg>
+<arg>${SHORT_PAUSE}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:41.535753" elapsed="0.700918"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:12:42.236671" level="INFO">Clicking element 'css=#gateDownloadButton'.</msg>
+<arg>css=#gateDownloadButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-09T23:12:42.236671" elapsed="0.094837"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:12:45.331991" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:42.331508" elapsed="3.000483"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-10-09T23:12:45.331991" elapsed="0.073026"/>
+</kw>
+<arg>${hyp_url}</arg>
+<arg>fire</arg>
+<doc>Ejecuta el flujo completo de Hypeddit en ${hypeddit_url}.
+1) Download -&gt; comment -&gt; login SC en popup y aprobar
+2) Paso Instagram: abre popup, espera y cierra
+3) Click Download final</doc>
+<status status="PASS" start="2025-10-09T23:12:29.659859" elapsed="15.745158"/>
+</kw>
+<arg>'${hyp_url}'!='None'</arg>
+<arg>Run Hypeddit Flow</arg>
+<arg>${hyp_url}</arg>
+<arg>fire</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-09T23:12:29.658860" elapsed="15.746157"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-09T23:13:05.407299" level="INFO">Slept 20 seconds.</msg>
+<arg>20</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-09T23:12:45.406017" elapsed="20.001282"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-10-09T23:13:05.415961" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=141.0.3537.57)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff699032a15+51877]
+	GetHandleVerifier [0x0x7ff699032a74+51972]
+	GetHandleVerifier [0x0x7ff6991e93c5+1848405]
+	(No symbol) [0x0x7ff698d80e5f]
+	(No symbol) [0x0x7ff698e174ec]
+	(No symbol) [0x0x7ff698e2ed0a]
+	(No symbol) [0x0x7ff698e11df3]
+	(No symbol) [0x0x7ff698de5b36]
+	(No symbol) [0x0x7ff698de4d80]
+	(No symbol) [0x0x7ff698de5973]
+	(No symbol) [0x0x7ff698eae4a5]
+	(No symbol) [0x0x7ff698eaa75d]
+	GetHandleVerifier [0x0x7ff69905d253+226019]
+	GetHandleVerifier [0x0x7ff69904c421+156849]
+	GetHandleVerifier [0x0x7ff699054919+190889]
+	GetHandleVerifier [0x0x7ff699039b54+80868]
+	GetHandleVerifier [0x0x7ff699039ca3+81203]
+	GetHandleVerifier [0x0x7ff699028226+8886]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</msg>
+<msg time="2025-10-09T23:13:05.418577" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=141.0.3537.57)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff699032a15+51877]
+	GetHandleVerifier [0x0x7ff699032a74+51972]
+	GetHandleVerifier [0x0x7ff6991e93c5+1848405]
+	(No symbol) [0x0x7ff698d80e5f]
+	(No symbol) [0x0x7ff698e174ec]
+	(No symbol) [0x0x7ff698e2ed0a]
+	(No symbol) [0x0x7ff698e11df3]
+	(No symbol) [0x0x7ff698de5b36]
+	(No symbol) [0x0x7ff698de4d80]
+	(No symbol) [0x0x7ff698de5973]
+	(No symbol) [0x0x7ff698eae4a5]
+	(No symbol) [0x0x7ff698eaa75d]
+	GetHandleVerifier [0x0x7ff69905d253+226019]
+	GetHandleVerifier [0x0x7ff69904c421+156849]
+	GetHandleVerifier [0x0x7ff699054919+190889]
+	GetHandleVerifier [0x0x7ff699039b54+80868]
+	GetHandleVerifier [0x0x7ff699039ca3+81203]
+	GetHandleVerifier [0x0x7ff699028226+8886]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" start="2025-10-08T11:11:29.695518" elapsed="0.000000"/>
+<status status="FAIL" start="2025-10-09T23:13:05.407910" elapsed="0.030700">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=141.0.3537.57)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff699032a15+51877]
+	GetHandleVerifier [0x0x7ff699032a74+51972]
+	GetHandleVerifier [0x0x7ff6991e93c5+1848405]
+	(No symbol) [0x0x7ff698d80e5f]
+	(No symbol) [0x0x7ff698e174ec]
+	(No symbol) [0x0x7ff698e2ed0a]
+	(No symbol) [0x0x7ff698e11df3]
+	(No symbol) [0x0x7ff698de5b36]
+	(No symbol) [0x0x7ff698de4d80]
+	(No symbol) [0x0x7ff698de5973]
+	(No symbol) [0x0x7ff698eae4a5]
+	(No symbol) [0x0x7ff698eaa75d]
+	GetHandleVerifier [0x0x7ff69905d253+226019]
+	GetHandleVerifier [0x0x7ff69904c421+156849]
+	GetHandleVerifier [0x0x7ff699054919+190889]
+	GetHandleVerifier [0x0x7ff699039b54+80868]
+	GetHandleVerifier [0x0x7ff699039ca3+81203]
+	GetHandleVerifier [0x0x7ff699028226+8886]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</status>
 </kw>
-<status status="FAIL" start="2025-10-08T11:11:14.867542" elapsed="14.827976">No window matching handle, name, title or URL 'index=-1' found.</status>
+<status status="FAIL" start="2025-10-09T23:12:18.497636" elapsed="46.941942">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=141.0.3537.57)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff699032a15+51877]
+	GetHandleVerifier [0x0x7ff699032a74+51972]
+	GetHandleVerifier [0x0x7ff6991e93c5+1848405]
+	(No symbol) [0x0x7ff698d80e5f]
+	(No symbol) [0x0x7ff698e174ec]
+	(No symbol) [0x0x7ff698e2ed0a]
+	(No symbol) [0x0x7ff698e11df3]
+	(No symbol) [0x0x7ff698de5b36]
+	(No symbol) [0x0x7ff698de4d80]
+	(No symbol) [0x0x7ff698de5973]
+	(No symbol) [0x0x7ff698eae4a5]
+	(No symbol) [0x0x7ff698eaa75d]
+	GetHandleVerifier [0x0x7ff69905d253+226019]
+	GetHandleVerifier [0x0x7ff69904c421+156849]
+	GetHandleVerifier [0x0x7ff699054919+190889]
+	GetHandleVerifier [0x0x7ff699039b54+80868]
+	GetHandleVerifier [0x0x7ff699039ca3+81203]
+	GetHandleVerifier [0x0x7ff699028226+8886]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</status>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-10-08T11:11:29.696536" elapsed="2.506249"/>
+<status status="PASS" start="2025-10-09T23:13:05.442577" elapsed="2.443171"/>
 </kw>
 <doc>SoundCloud downloader – usa el perfil por defecto de Edge (último usado) para aprovechar la sesión iniciada.</doc>
-<status status="FAIL" start="2025-10-08T11:11:10.331040" elapsed="21.871745"/>
+<status status="FAIL" start="2025-10-09T23:12:15.507342" elapsed="52.378406"/>
 </suite>
 <statistics>
 <total>
@@ -1106,5 +1548,30 @@ Stacktrace:
 </suite>
 </statistics>
 <errors>
+<msg time="2025-10-09T23:13:05.415961" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=141.0.3537.57)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff699032a15+51877]
+	GetHandleVerifier [0x0x7ff699032a74+51972]
+	GetHandleVerifier [0x0x7ff6991e93c5+1848405]
+	(No symbol) [0x0x7ff698d80e5f]
+	(No symbol) [0x0x7ff698e174ec]
+	(No symbol) [0x0x7ff698e2ed0a]
+	(No symbol) [0x0x7ff698e11df3]
+	(No symbol) [0x0x7ff698de5b36]
+	(No symbol) [0x0x7ff698de4d80]
+	(No symbol) [0x0x7ff698de5973]
+	(No symbol) [0x0x7ff698eae4a5]
+	(No symbol) [0x0x7ff698eaa75d]
+	GetHandleVerifier [0x0x7ff69905d253+226019]
+	GetHandleVerifier [0x0x7ff69904c421+156849]
+	GetHandleVerifier [0x0x7ff699054919+190889]
+	GetHandleVerifier [0x0x7ff699039b54+80868]
+	GetHandleVerifier [0x0x7ff699039ca3+81203]
+	GetHandleVerifier [0x0x7ff699028226+8886]
+	BaseThreadInitThunk [0x0x7ffc91a67374+20]
+	RtlUserThreadStart [0x0x7ffc9305cc91+33]
+</msg>
 </errors>
 </robot>

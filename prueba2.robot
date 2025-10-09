@@ -4,6 +4,8 @@ Library           SeleniumLibrary
 Library           OperatingSystem
 Library           String
 Library           Process
+Resource          ./browser_keywords.resource      # <-- aquí está Open Edge With Default Windows Profile
+Resource          ./hypeddit.resource         # <-- aquí está Run Hypeddit Flow
 Suite Setup       Open Edge With Default Windows Profile
 Suite Teardown    Close All Browsers
 
@@ -173,6 +175,7 @@ Download If Available
         Press Keys    NONE    ESC
         Sleep    0.3 s
         ${opened}=    Click Purchase Link If Hypeddit
+        RETURN    ${opened}
         IF    '${opened}'=='None'
             Log To Console    ❌ NO HAY DESCARGA ni enlace Hypeddit permitido
         END
@@ -265,8 +268,9 @@ Click Purchase Link If Hypeddit
         ${prev}=    Get Length    ${before}
         Click Element    xpath=${purchase}
         Wait Until Keyword Succeeds    20x    0.5 s    Window Count Should Be Greater    ${prev}
-        Switch Window    index=-1
+        Switch Window    NEW
         Log To Console    ✅ Abierto Hypeddit en nueva pestaña: ${final_url}
+
         RETURN    ${final_url}
     ELSE
         Log To Console    ⚠️ Enlace externo NO permitido: ${domain} (no se abre)
@@ -278,5 +282,8 @@ Opcion A - Abrir página de pista y descargar si hay
     Open Playlist
     Open Track Page And Open More Menu    ${TRACK_NUM}
     Extract And Save Track Metadata    ${TRACK_NUM}
-    Download If Available
-    Capture Page Screenshot
+    ${hyp_url}=    Download If Available
+    Run Keyword If    '${hyp_url}'!='None'    Run Hypeddit Flow    ${hyp_url}    fire
+    #Switch Window By Url    ${PLAYLIST_URL}
+    Sleep    20
+
