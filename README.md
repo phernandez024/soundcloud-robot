@@ -35,16 +35,14 @@ El robot abre la playlist, entra en la pista *N*, intenta descargar si hay botó
 
 2) Crear y activar el entorno virtual (venv):
 
+   ```bash
    python -m venv .venv
+   . .\.venv\Scripts\Activate.ps1
 
-  # PowerShell
-  . .\.venv\Scripts\Activate.ps1
-
-  # (alternativa CMD)
-  .\.venv\Scripts\activate.bat
 
 3) Instalar dependencias:
 
+   ```bash
    pip install -r requirements.txt
 
 ## 🔐 Primer uso: iniciar sesión en Edge
