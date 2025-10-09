@@ -1,19 +1,20 @@
 *** Settings ***
-Documentation     SoundCloud downloader – usa el perfil por defecto de Edge (último usado), guarda título/artista/portada y descarga si hay.
+Documentation     SoundCloud downloader – usa el perfil por defecto de Edge (último usado) para aprovechar la sesión iniciada.
 Library           SeleniumLibrary
 Library           OperatingSystem
+Library           String
 Library           Process
 Suite Setup       Open Edge With Default Windows Profile
 Suite Teardown    Close All Browsers
 
 *** Variables ***
-${BASE_TIMEOUT}      15 s
-${PLAYLIST_URL}      https://soundcloud.com/doncucho/sets/schranz-3
-${TRACK_NUM}         5
+${BASE_TIMEOUT}           15 s
+${PLAYLIST_URL}           https://soundcloud.com/doncucho/sets/schranz-3
+${TRACK_NUM}              3
 ${DOWNLOAD_DIR}      ${OUTPUT DIR}${/}downloads
 ${META_DIR}          ${OUTPUT DIR}${/}meta
 ${COVERS_DIR}        ${OUTPUT DIR}${/}portadas
-${DOWNLOAD_TIMEOUT}  2 min
+${DOWNLOAD_TIMEOUT}       2 min
 
 *** Keywords ***
 Open Edge With Default Windows Profile
@@ -81,7 +82,9 @@ Ensure Track Item Is Rendered
     ${li}=    Set Variable    (//li[contains(@class,'trackList__item') or contains(@class,'soundList__item')])[${n}]
     FOR    ${i}    IN RANGE    0    40
         ${ok}=    Run Keyword And Return Status    Page Should Contain Element    xpath=${li}
-        IF    ${ok}    BREAK
+        IF    ${ok}
+            BREAK
+        END
         Execute JavaScript    window.scrollBy(0, 800)
         Sleep    0.2 s
     END
@@ -109,6 +112,7 @@ Open More Menu On Track Page
     # Confirmar que se abrió el menú
     Wait Until Keyword Succeeds    10x    0.3 s    Page Should Contain Element
     ...    //div[contains(@class,'dropdown') or contains(@class,'moreActions') or @role='menu' or @role='listbox']
+
 Open Track Page And Open More Menu
     [Arguments]    ${n}
     Open Track Page By Index    ${n}
@@ -119,6 +123,26 @@ Get File Count In Dir
     ${count}=    Get Length    ${files}
     RETURN    ${count}
 
+File Count Should Increase
+    [Arguments]    ${old_count}
+    ${now}=    Get File Count In Dir
+    Should Be True    ${now} > ${old_count}
+
+Get Most Recent Completed Download
+    [Documentation]    Devuelve el archivo más reciente que no sea .crdownload.
+    ${paths}=    List Files In Directory    ${DOWNLOAD_DIR}    absolute=True
+    Should Not Be Empty    ${paths}
+    ${cands}=    Create List
+    FOR    ${p}    IN    @{paths}
+        ${is_tmp}=    Run Keyword And Return Status    Should End With    ${p}    .crdownload
+        IF    not ${is_tmp}
+            Append To List    ${cands}    ${p}
+        END
+    END
+    Should Not Be Empty    ${cands}
+    ${latest}=    Evaluate    sorted(${cands}, key=__import__("os").path.getmtime, reverse=True)[0]
+    RETURN      ${latest}
+
 Wait For New Download
     [Arguments]    ${old_count}
     [Documentation]    Espera a que aparezca un nuevo archivo y a que termine (desaparece .crdownload).
@@ -126,23 +150,36 @@ Wait For New Download
     ${final_file}=    Wait Until Keyword Succeeds    60x    2 s    Get Most Recent Completed Download
     Log To Console    ✅ Descargado: ${final_file}
 
-File Count Should Be Greater
-    [Arguments]    ${old}
-    ${now}=    Get File Count In Dir
-    Should Be True    ${now} > ${old}
-
-Click Download And Wait
+Download If Available
+    [Documentation]    Intenta “Download”. Si no existe, abre enlace externo SOLO si es Hypeddit.
     ${before}=    Get File Count In Dir
-    # Espera a que el menú tenga la opción Download (botón o enlace)
-    Wait Until Keyword Succeeds    10x    1 s    Page Should Contain Element
-    ...    //button[contains(@class,'sc-button-download')] | //a[(contains(@class,'download') or contains(@href,'/download') or contains(.,'Download'))]
-    ${has_btn}=   Run Keyword And Return Status    Page Should Contain Element    //button[contains(@class,'sc-button-download')]
-    IF    ${has_btn}
-        Click Element    //button[contains(@class,'sc-button-download')]
+
+    # XPath único con uniones (botón Download o enlace /download)
+    ${download_any}=    Set Variable
+    ...    //button[contains(@class,'sc-button-download')]
+    ...    | //button[.//span[normalize-space(.)='Download']]
+    ...    | //a[(contains(@class,'sc-link') or contains(@class,'download')) and (contains(normalize-space(.),'Download') or contains(@href,'/download'))]
+
+    # No bloquee la ejecución si no está: check con timeout corto
+    ${present}=    Run Keyword And Return Status    Wait Until Page Contains Element    xpath=${download_any}    5 s
+
+    IF    ${present}
+        Click Element    xpath=${download_any}
+        # (Opcional) esperar archivo si esperas descarga directa
+        # Wait For New Download    ${before}
+        Log To Console    ✅ Click en “Download”
     ELSE
-        Click Element    //a[(contains(@class,'download') or contains(@href,'/download') or contains(.,'Download'))]
+        # Fallback: intentar enlace externo sólo si es Hypeddit
+        Press Keys    NONE    ESC
+        Sleep    0.3 s
+        ${opened}=    Click Purchase Link If Hypeddit
+        IF    '${opened}'=='None'
+            Log To Console    ❌ NO HAY DESCARGA ni enlace Hypeddit permitido
+        END
     END
-    Wait For New Download    ${before}
+
+
+   # Wait For New Download    ${before}
 
 _ensure_meta_csv_headers_exist
     ${t_csv}=    Set Variable    ${META_DIR}${/}titulos.csv
@@ -191,21 +228,55 @@ Extract And Save Track Metadata
     ${t_csv}=    Set Variable    ${META_DIR}${/}titulos.csv
     ${a_csv}=    Set Variable    ${META_DIR}${/}artistas.csv
     ${title_q}=  _csv_escape    ${title}
-    ${artist_q}= _csv_escape    ${artist}
+    ${artist_q}=    _csv_escape    ${artist}
     Append To File    ${t_csv}    ${n},"${title_q}"\n    UTF-8
     Append To File    ${a_csv}    ${n},"${artist_q}"\n    UTF-8
 
     # 3) Descargar portada a portadas/n.ext (ext de la URL o .png)
     ${ext}=   Evaluate    (lambda u: (__import__('os').path.splitext(__import__('urllib.parse', fromlist=['urlparse']).urlparse(u).path)[1] or '.png'))(r"""${img_url}""")
-    ${cover}= Set Variable    ${COVERS_DIR}${/}${n}${ext}
-    Evaluate  __import__('urllib.request').urlretrieve(r"""${img_url}""", r"""${cover}""")
+    ${cover}=   Set Variable    ${COVERS_DIR}${/}${n}${ext}
+    Evaluate    __import__('urllib.request', fromlist=['urlretrieve']).urlretrieve(r"""${img_url}""", r"""${cover}""")
     Log To Console    💾 Guardado meta en CSVs y portada: ${cover}
+Resolve Link To Final Url And Domain
+    [Arguments]    ${href}
+    ${final_url}=    Evaluate    (lambda h:(lambda up:( up.unquote(up.parse_qs(up.urlparse(h).query).get('url',[''])[0]) if 'gate.sc' in up.urlparse(h).netloc else h ))(__import__('urllib.parse', fromlist=['urlparse','parse_qs','unquote'])))(r"""${href}""")
+    ${domain}=       Evaluate    __import__('urllib.parse', fromlist=['urlparse']).urlparse(r"""${final_url}""").netloc.lower()
+    RETURN    ${final_url}    ${domain}
+
+Window Count Should Be Greater
+    [Arguments]    ${prev}
+    ${handles}=    Get Window Handles
+    ${n}=          Get Length    ${handles}
+    Should Be True    ${n} > ${prev}
+
+Click Purchase Link If Hypeddit
+    [Documentation]    Busca el botón externo en la página de pista y lo abre SÓLO si el destino es hypeddit.com.
+    ${purchase}=    Set Variable    //a[contains(@class,'soundActions__purchaseLink')]
+    ${exists}=      Run Keyword And Return Status    Page Should Contain Element    xpath=${purchase}
+    IF    not ${exists}
+        Log To Console    🔎 No hay botón de descarga externa en esta pista
+        RETURN    None
+    END
+    ${href}=        Get Element Attribute    xpath=${purchase}    href
+    ${final_url}    ${domain}=    Resolve Link To Final Url And Domain    ${href}
+    Log To Console  🔗 Enlace externo detectado → ${domain}
+    IF    'hypeddit.com' in '${domain}'
+        ${before}=  Get Window Handles
+        ${prev}=    Get Length    ${before}
+        Click Element    xpath=${purchase}
+        Wait Until Keyword Succeeds    20x    0.5 s    Window Count Should Be Greater    ${prev}
+        Switch Window    index=-1
+        Log To Console    ✅ Abierto Hypeddit en nueva pestaña: ${final_url}
+        RETURN    ${final_url}
+    ELSE
+        Log To Console    ⚠️ Enlace externo NO permitido: ${domain} (no se abre)
+        RETURN    None
+    END
 
 *** Test Cases ***
-Opcion A - Guardar meta de la pista y descargar si hay
+Opcion A - Abrir página de pista y descargar si hay
     Open Playlist
-    Open Track Page By Index    ${TRACK_NUM}
+    Open Track Page And Open More Menu    ${TRACK_NUM}
     Extract And Save Track Metadata    ${TRACK_NUM}
-    Open More Menu On Track Page
-    Click Download And Wait
+    Download If Available
     Capture Page Screenshot
