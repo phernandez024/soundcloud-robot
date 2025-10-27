@@ -1,49 +1,626 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.0 on win32)" generated="2025-10-06T20:55:37.881288" rpa="false" schemaversion="5">
-<suite id="s1" name="Setup Login" source="C:\Users\USER\PycharmProjects\PythonProject\setup_login.robot">
-<test id="s1-t1" name="Login manual y guardar sesión" line="8">
-<kw name="New Browser" owner="Browser">
-<msg time="2025-10-06T20:55:38.174332" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\USER\\PycharmProjects\\PythonProject\\browser\\traces\\temp\\4278f2f1-5eec-4c6e-a679-73b7a1889e48"}</msg>
-<msg time="2025-10-06T20:55:38.211332" level="INFO">Starting Browser process C:\Users\USER\PycharmProjects\PythonProject\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:61642</msg>
-<arg>chromium</arg>
-<arg>headless=False</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="FAIL" start="2025-10-06T20:55:38.173334" elapsed="216.320564">Execution terminated by signal</status>
+<robot generator="Robot 7.3.2 (Python 3.12.0 on win32)" generated="2025-10-25T19:18:05.007810" rpa="false" schemaversion="5">
+<suite id="s1" name="Check External Links" source="C:\Users\USER\PycharmProjects\soundcloud-robot\check_external_links.robot">
+<kw name="Setup Suite" type="SETUP">
+<kw name="Open Edge With Default Windows Profile" owner="browser_keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:05.550356" level="INFO">${DOWNLOAD_DIR} = C:\Users\USER\PycharmProjects\soundcloud-robot\downloads</msg>
+<var>${DOWNLOAD_DIR}</var>
+<arg>${OUTPUT DIR}${/}downloads</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.549320" elapsed="0.001036"/>
 </kw>
-<kw name="New Context" owner="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<status status="NOT RUN" start="2025-10-06T20:59:14.493898" elapsed="0.000921"/>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-10-25T19:18:05.550356" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\downloads"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\downloads&lt;/a&gt;' already exists.</msg>
+<arg>${DOWNLOAD_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.550356" elapsed="0.000000"/>
 </kw>
-<kw name="New Page" owner="Browser">
-<arg>https://soundcloud.com/signin</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="NOT RUN" start="2025-10-06T20:59:14.494819" elapsed="0.000000"/>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-10-25T19:18:05.550356" level="INFO">${LOCALAPPDATA} = C:\Users\USER\AppData\Local</msg>
+<var>${LOCALAPPDATA}</var>
+<arg>LOCALAPPDATA</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.550356" elapsed="0.001005"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:05.551361" level="INFO">${USER_DATA} = C:\Users\USER\AppData\Local\Microsoft\Edge\User Data</msg>
+<var>${USER_DATA}</var>
+<arg>${LOCALAPPDATA}${/}Microsoft${/}Edge${/}User Data</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.551361" elapsed="0.000000"/>
+</kw>
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2025-10-25T19:18:05.551361" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\AppData\Local\Microsoft\Edge\User Data"&gt;C:\Users\USER\AppData\Local\Microsoft\Edge\User Data&lt;/a&gt;' exists.</msg>
+<arg>${USER_DATA}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.551361" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:05.552359" level="INFO">${LOCAL_STATE} = C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Local State</msg>
+<var>${LOCAL_STATE}</var>
+<arg>${USER_DATA}${/}Local State</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.552359" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-25T19:18:05.552359" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>__import__('os').path.exists(r"""${LOCAL_STATE}""")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.552359" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${exists}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-25T19:18:05.563321" level="INFO">${LAST_USED} = Default</msg>
+<var>${LAST_USED}</var>
+<arg>__import__('json').load(open(r"""${LOCAL_STATE}""","r",encoding="utf-8")).get("profile",{}).get("last_used","Default")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.553371" elapsed="0.009950"/>
+</kw>
+<status status="PASS" start="2025-10-25T19:18:05.552359" elapsed="0.010962"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${LAST_USED}</var>
+<arg>Default</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:05.563321" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-10-25T19:18:05.563321" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-10-25T19:18:05.552359" elapsed="0.011963"/>
+</if>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:05.564322" level="INFO">${PROFILE_PATH} = C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default</msg>
+<var>${PROFILE_PATH}</var>
+<arg>${USER_DATA}${/}${LAST_USED}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.564322" elapsed="0.000000"/>
+</kw>
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2025-10-25T19:18:05.565321" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default"&gt;C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default&lt;/a&gt;' exists.</msg>
+<arg>${PROFILE_PATH}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.564322" elapsed="0.000999"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔎 Perfil Edge detectado: ${LAST_USED} → ${PROFILE_PATH}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.565321" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Run Process">
+<msg time="2025-10-25T19:18:05.567320" level="FAIL">No keyword with name 'Run Process' found. Did you try using keyword 'OperatingSystem.Run' and forgot to use enough whitespace between keyword and arguments?</msg>
+<arg>taskkill</arg>
+<arg>/F</arg>
+<arg>/IM</arg>
+<arg>msedge.exe</arg>
+<arg>shell=True</arg>
+<status status="FAIL" start="2025-10-25T19:18:05.567320" elapsed="0.000000">No keyword with name 'Run Process' found. Did you try using keyword 'OperatingSystem.Run' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<arg>Run Process</arg>
+<arg>taskkill</arg>
+<arg>/F</arg>
+<arg>/IM</arg>
+<arg>msedge.exe</arg>
+<arg>shell=True</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.565321" elapsed="0.001999"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>15s</arg>
+<msg time="2025-10-25T19:18:06.068072" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5 s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-10-06T20:59:14.494819" elapsed="0.001050"/>
+<status status="PASS" start="2025-10-25T19:18:05.567320" elapsed="0.500752"/>
 </kw>
-<kw name="Save Storage State" owner="Browser">
-<arg>${STATE_FILE}</arg>
-<tag>BrowserControl</tag>
-<tag>Getter</tag>
-<doc>Saves the current active context storage state to a file.</doc>
-<status status="NOT RUN" start="2025-10-06T20:59:14.495869" elapsed="0.000000"/>
+<kw name="List Files In Directory" owner="OperatingSystem">
+<msg time="2025-10-25T19:18:06.068072" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default"&gt;C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default&lt;/a&gt;'.</msg>
+<msg time="2025-10-25T19:18:06.069117" level="INFO">0 files:
+</msg>
+<msg time="2025-10-25T19:18:06.069117" level="INFO">${locks} = []</msg>
+<var>${locks}</var>
+<arg>${PROFILE_PATH}</arg>
+<arg>pattern=Singleton*</arg>
+<doc>Wrapper for `List Directory` that returns only files.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.068072" elapsed="0.001045"/>
 </kw>
-<kw name="Close Browser" owner="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-10-06T20:59:14.495869" elapsed="0.000950"/>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<arg>Remove File</arg>
+<arg>${f}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:06.069117" elapsed="0.000000"/>
 </kw>
+<var name="${f}"/>
+<status status="NOT RUN" start="2025-10-25T19:18:06.069117" elapsed="0.000000"/>
+</iter>
+<var>${f}</var>
+<value>@{locks}</value>
+<status status="NOT RUN" start="2025-10-25T19:18:06.069117" elapsed="0.000000"/>
+</for>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2025-10-25T19:18:06.070110" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default\LOCK"&gt;C:\Users\USER\AppData\Local\Microsoft\Edge\User Data\Default\LOCK&lt;/a&gt;'.</msg>
+<arg>${PROFILE_PATH}${/}LOCK</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.070110" elapsed="0.000957"/>
+</kw>
+<arg>Remove File</arg>
+<arg>${PROFILE_PATH}${/}LOCK</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.070110" elapsed="0.000957"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-25T19:18:06.071067" level="INFO">${opt} = &lt;selenium.webdriver.edge.options.Options object at 0x000002275862A360&gt;</msg>
+<var>${opt}</var>
+<arg>__import__('selenium.webdriver.edge.options', fromlist=['Options']).Options()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.071067" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:06.072129" level="INFO">${arg_user} = --user-data-dir=C:\Users\USER\AppData\Local\Microsoft\Edge\User Data</msg>
+<var>${arg_user}</var>
+<arg>--user-data-dir=${USER_DATA}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.071067" elapsed="0.001062"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:06.072129" level="INFO">${arg_prof} = --profile-directory=Default</msg>
+<var>${arg_prof}</var>
+<arg>--profile-directory=${LAST_USED}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.072129" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:06.072129" level="INFO">${arg_max} = --start-maximized</msg>
+<var>${arg_max}</var>
+<arg>--start-maximized</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.072129" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:06.072129" level="INFO">${arg_devshm} = --disable-dev-shm-usage</msg>
+<var>${arg_devshm}</var>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.072129" elapsed="0.000976"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:06.073105" level="INFO">${arg_no_first} = --no-first-run</msg>
+<var>${arg_no_first}</var>
+<arg>--no-first-run</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.073105" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:06.073105" level="INFO">${arg_no_default} = --no-default-browser-check</msg>
+<var>${arg_no_default}</var>
+<arg>--no-default-browser-check</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.073105" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_user}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.073105" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_prof}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.073105" elapsed="0.001004"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_max}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.074140" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_devshm}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.074140" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_no_first}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.074140" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_argument</arg>
+<arg>${arg_no_default}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.074140" elapsed="0.001142"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-25T19:18:06.075282" level="INFO">&amp;{prefs} = { download.default_directory=C:\Users\USER\PycharmProjects\soundcloud-robot\downloads | download.prompt_for_download=False | download.directory_upgrade=True | safebrowsing.enabled=True }</msg>
+<var>&amp;{prefs}</var>
+<arg>download.default_directory=${DOWNLOAD_DIR}</arg>
+<arg>download.prompt_for_download=${False}</arg>
+<arg>download.directory_upgrade=${True}</arg>
+<arg>safebrowsing.enabled=${True}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.075282" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opt}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.075282" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-10-25T19:18:06.076320" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<arg>Edge</arg>
+<arg>options=${opt}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-10-25T19:18:06.075282" elapsed="2.490376"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>15 s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.566671" elapsed="0.002984"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Edge con perfil real: ${PROFILE_PATH} — Descargas: ${DOWNLOAD_DIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.569655" elapsed="0.001001"/>
+</kw>
+<doc>Abre Edge con el perfil por defecto (último usado). Cierra Edge y elimina locks antes.</doc>
+<status status="PASS" start="2025-10-25T19:18:05.549320" elapsed="3.021336"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-10-25T19:18:08.570656" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\temp\urls_for_robot.json"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\temp\urls_for_robot.json&lt;/a&gt;'.</msg>
+<msg time="2025-10-25T19:18:08.572657" level="INFO">${urls_json} = [
+  {
+    "num": 1,
+    "url": "https://soundcloud.com/clastechno/onlynumbers-only-you-clast-schranz-edit",
+    "title": "Sin título"
+  },
+  {
+    "num": 2,
+    "url": "https://soundcloud.com/user-203...</msg>
+<var>${urls_json}</var>
+<arg>${URLS_FILE}</arg>
+<arg>encoding=UTF-8</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.570656" elapsed="0.003001"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-25T19:18:08.574694" level="INFO">${urls_data} = [{'num': 1, 'url': 'https://soundcloud.com/clastechno/onlynumbers-only-you-clast-schranz-edit', 'title': 'Sin título'}, {'num': 2, 'url': 'https://soundcloud.com/user-203386955/the-cardigans-my-favour...</msg>
+<var>${urls_data}</var>
+<arg>__import__('json').loads('''${urls_json}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.573657" elapsed="0.001037"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:08.575657" level="INFO">${URLS_DATA} = [{'num': 1, 'url': 'https://soundcloud.com/clastechno/onlynumbers-only-you-clast-schranz-edit', 'title': 'Sin título'}, {'num': 2, 'url': 'https://soundcloud.com/user-203386955/the-cardigans-my-favour...</msg>
+<arg>${URLS_DATA}</arg>
+<arg>${urls_data}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.575657" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-10-25T19:18:08.576666" level="INFO">${results} = []</msg>
+<var>${results}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.575657" elapsed="0.001009"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-10-25T19:18:08.576666" level="INFO">${RESULTS} = []</msg>
+<arg>${RESULTS}</arg>
+<arg>${results}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.576666" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-10-25T19:18:05.548320" elapsed="3.029337"/>
+</kw>
+<test id="s1-t1" name="Process All Tracks From JSON" line="167">
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-10-25T19:18:08.578673" level="INFO">Length is 4.</msg>
+<msg time="2025-10-25T19:18:08.578673" level="INFO">${track_count} = 4</msg>
+<var>${track_count}</var>
+<arg>${URLS_DATA}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.577657" elapsed="0.001016"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n======================================================================</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.578673" elapsed="0.000983"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🤖 Robot Framework: Procesando ${track_count} tracks</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.579656" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>⚠️</arg>
+<arg>Pausa de ${DELAY}s entre tracks para evitar rate limiting</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.580658" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>======================================================================</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.580658" elapsed="0.001000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-25T19:18:08.582663" level="INFO">${num} = 1</msg>
+<var>${num}</var>
+<arg>${track}</arg>
+<arg>num</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.582663" elapsed="0.000000"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-25T19:18:08.583657" level="INFO">${url} = https://soundcloud.com/clastechno/onlynumbers-only-you-clast-schranz-edit</msg>
+<var>${url}</var>
+<arg>${track}</arg>
+<arg>url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.582663" elapsed="0.000994"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-25T19:18:08.583657" level="INFO">${title} = Sin título</msg>
+<var>${title}</var>
+<arg>${track}</arg>
+<arg>title</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.583657" elapsed="0.001003"/>
+</kw>
+<kw name="Check Track For External Link">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n======================================================================</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.585766" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>[${track_num}] Verificando: ${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.586657" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>======================================================================</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.586657" elapsed="0.001000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-25T19:18:08.587657" level="INFO">Opening url 'https://soundcloud.com/clastechno/onlynumbers-only-you-clast-schranz-edit'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-25T19:18:08.587657" elapsed="7.633903"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2025-10-25T19:18:31.498700" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-25T19:18:31.498700" level="FAIL">Element '//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more')]' did not appear in 15 seconds.</msg>
+<arg>//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more')]</arg>
+<arg>${BASE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-25T19:18:16.221560" elapsed="15.280137">Element '//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more')]' did not appear in 15 seconds.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.501697" elapsed="0.000000"/>
+</kw>
+<kw name="Open More Menu On Track Page">
+<doc>En la página de pista, abrir el menú de los tres puntitos</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.501697" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.501697" elapsed="0.000000"/>
+</kw>
+<kw name="Download If Available">
+<var>${download_result}</var>
+<doc>Intenta "Download". Si no existe, abre enlace externo SOLO si es Hypeddit</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>${result}</var>
+<arg>num=${track_num}</arg>
+<arg>url=${url}</arg>
+<arg>title=${title}</arg>
+<arg>external_url=None</arg>
+<arg>downloaded=${False}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${download_result}' == 'internal_download'">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n</arg>
+<arg>ℹ️</arg>
+<arg>Archivo original ya descargado previamente</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${result}</arg>
+<arg>downloaded=${True}</arg>
+<arg>external_url=internal</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${download_result}' != 'None'">
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${result}</arg>
+<arg>external_url=${download_result}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.000000"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Run Hypeddit Flow" owner="hypeddit">
+<arg>${download_result}</arg>
+<arg>fire</arg>
+<doc>Ejecuta el flujo completo de Hypeddit en ${hypeddit_url}.
+1) Download -&gt; comment -&gt; login SC en popup y aprobar
+2) Paso Instagram: abre popup, espera y cierra
+3) Click Download final</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.503739" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${result}</arg>
+<arg>downloaded=${True}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.503739" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n</arg>
+<arg>✅ Descargado vía Hypeddit</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.503739" elapsed="0.000974"/>
+</kw>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.002012"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n</arg>
+<arg>✗ Error al descargar de Hypeddit</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.504751" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${result}</arg>
+<arg>downloaded=${False}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.504751" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-10-25T19:18:31.504751" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.002012"/>
+</try>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.504751" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.504751" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.002012"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n</arg>
+<arg>ℹ️</arg>
+<arg>Sin enlace externo - se descargará con yt-dlp</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.504751" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${result}</arg>
+<arg>downloaded=${False}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.504751" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-10-25T19:18:31.504751" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2025-10-25T19:18:31.502739" elapsed="0.003000"/>
+</if>
+<kw name="Append To List" owner="Collections">
+<arg>${RESULTS}</arg>
+<arg>${result}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.505739" elapsed="0.000000"/>
+</kw>
+<arg>${num}</arg>
+<arg>${url}</arg>
+<arg>${title}</arg>
+<doc>Verifica si un track tiene enlace externo y lo procesa</doc>
+<status status="FAIL" start="2025-10-25T19:18:08.584660" elapsed="22.921079">Element '//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more')]' did not appear in 15 seconds.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${DELAY}s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.505739" elapsed="0.000000"/>
+</kw>
+<var name="${track}">{'num': 1, 'url': 'https://soundcloud.com/clastechno/onlynumbers-only-you-clast-schranz-edit', 'title': 'Sin título'}</var>
+<status status="FAIL" start="2025-10-25T19:18:08.581658" elapsed="22.924081">Element '//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more')]' did not appear in 15 seconds.</status>
+</iter>
+<var>${track}</var>
+<value>@{URLS_DATA}</value>
+<status status="FAIL" start="2025-10-25T19:18:08.581658" elapsed="22.924081">Element '//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more')]' did not appear in 15 seconds.</status>
+</for>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n======================================================================</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.505739" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Robot Framework: Procesamiento completado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.505739" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>======================================================================</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-25T19:18:31.505739" elapsed="0.000000"/>
+</kw>
+<doc>Procesa todos los tracks del archivo JSON</doc>
+<status status="FAIL" start="2025-10-25T19:18:08.577657" elapsed="22.928082">Element '//div[contains(@class,'listenEngagement') or contains(@class,'fullListen')]//button[contains(@class,'sc-button-more')]' did not appear in 15 seconds.</status>
+</test>
+<kw name="Teardown Suite" type="TEARDOWN">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-25T19:18:31.506739" level="INFO">${json_output} = []</msg>
+<var>${json_output}</var>
+<arg>__import__('json').dumps(${RESULTS}, indent=2, ensure_ascii=False)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-25T19:18:31.506739" elapsed="0.000000"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-10-25T19:18:31.507739" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\USER\PycharmProjects\soundcloud-robot\temp\external_links.json"&gt;C:\Users\USER\PycharmProjects\soundcloud-robot\temp\external_links.json&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${json_output}</arg>
+<arg>encoding=UTF-8</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-10-25T19:18:31.507739" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n✓ Resultados guardados en: ${OUTPUT_FILE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-25T19:18:31.508696" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-10-25T19:18:31.508696" elapsed="2.450926"/>
+</kw>
+<status status="PASS" start="2025-10-25T19:18:31.506739" elapsed="2.452883"/>
+</kw>
+<doc>Verifica enlaces externos de SoundCloud y descarga si son Hypeddit</doc>
+<status status="FAIL" start="2025-10-25T19:18:05.010811" elapsed="28.948811"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Check External Links" id="s1" pass="0" fail="1" skip="0">Check External Links</stat>
+</suite>
+</statistics>
 <errors>
-<msg time="2025-10-06T20:59:14.802518" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>

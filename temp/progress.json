@@ -1,0 +1,44 @@
+{
+  "tracks_with_download": [
+    {
+      "num": 3,
+      "url": "https://soundcloud.com/nicolai-krehl/propangaskoala-verloren-im-nichts-free-download",
+      "title": "Sin título"
+    },
+    {
+      "num": 4,
+      "url": "https://soundcloud.com/m0rphera/appa-goes-schranz",
+      "title": "Sin título"
+    },
+    {
+      "num": 7,
+      "url": "https://api-v2.soundcloud.com/tracks/2156348421",
+      "title": "Sin título"
+    }
+  ],
+  "tracks_for_robot": [
+    {
+      "num": 1,
+      "url": "https://soundcloud.com/clastechno/onlynumbers-only-you-clast-schranz-edit",
+      "title": "Sin título"
+    },
+    {
+      "num": 2,
+      "url": "https://soundcloud.com/user-203386955/the-cardigans-my-favourite-game-azzik-schranz-edit",
+      "title": "Sin título"
+    },
+    {
+      "num": 5,
+      "url": "https://soundcloud.com/instigatormusic/wild-fear",
+      "title": "Sin título"
+    },
+    {
+      "num": 6,
+      "url": "https://api-v2.soundcloud.com/tracks/1801900384",
+      "title": "Sin título"
+    }
+  ],
+  "last_checked_index": 7,
+  "last_downloaded_index": 3,
+  "completed": true
+}
